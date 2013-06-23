@@ -1,9 +1,12 @@
+# -*- coding: utf-8 -*-
+
 import re
 import os
 
 import pygments
 from pygments import formatters, util, lexers
 import blogofile_bf as bf
+from django.utils.encoding import smart_str
  
 config = {"name": "Syntax Highlighter",
           "description": "Highlights blocks of code based on syntax",
@@ -98,8 +101,7 @@ def highlight_code(code, language, formatter):
         lexer = pygments.lexers.get_lexer_by_name("text")
     #Highlight with pygments and surround by blank lines
     #(blank lines required for markdown syntax)
-    highlighted = "\n\n{0}\n\n".format(
-            pygments.highlight(code, lexer, formatter))
+    highlighted = "\n\n"+pygments.highlight(code, lexer, formatter)+"\n\n"
     return highlighted
 
 
@@ -127,6 +129,7 @@ def write_pygments_css(style, formatter,
     if css_site_path in css_files_written:
         return #already written, no need to overwrite it.
     f = open(css_path, "w")
+
     css_class = ".pygments_{0}".format(style)
     f.write(formatter.get_style_defs(css_class))
     f.close()
@@ -134,6 +137,10 @@ def write_pygments_css(style, formatter,
 
 
 def run(src):
+    src=re.sub(r'\[code lang=[\"|\'](.*?)[\"|\']\]',r"\n$$code(lang=\1)\n",src)
+    src=re.sub(r'\[code.*?\]',"\n$$code\n",src).replace("[/code]","\n$$/code\n").replace("&lt;","<").replace("&gt;",">")
+
+
     substitutions = {}
     for m in code_block_re.finditer(src):
         args = parse_args(m.group('args'))
