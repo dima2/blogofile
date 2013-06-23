@@ -9,8 +9,10 @@
 /dist/*
 /blogofile/.ropeproject*
 /blogofile/site_init/*.zip
-_site/*
+_site/
 _documentation/themes/blogofile/layout.html
 _top.json
 _posts/
 uploads/
+downloads/
+_profile

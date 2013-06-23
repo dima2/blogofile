@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Disallow: http://thexnews.com/ubuntu/Edit
+Sitemap: http://thexnews.com/ubuntu/sitemap.xml 
