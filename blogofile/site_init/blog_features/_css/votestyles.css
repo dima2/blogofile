@@ -1,0 +1,74 @@
+.vote_bg, .vote_result {
+    background: url("/images/vote.png") repeat scroll 0 0 transparent;
+    margin: 0 auto auto;
+}
+.vote {
+    clear:both;
+    width: 135px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.vote_bg {
+    height: 62px;
+    width: 134px;
+}
+.vote_result {
+    background-position:  0 -189px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 26px;
+    padding-top: 2px;
+    text-align: center;
+    width: 134px;
+    display: none;
+}
+.vote_up, .vote_down {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 63px;
+    margin: 0;
+    padding: 0;
+    width: 48%;
+}
+.vote_down {
+    float: right;
+}
+.vote_bg:active, .vote_result:active {
+   position: relative;
+   top: 1px;
+   left: 1px;
+}
+.votewidget_skin ul, .votewidget_skin li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.votewidget_skin li {
+    margin-bottom: 7px;
+}
+ 
+.attention {
+    display: block;
+    clear: both;
+    text-decoration: none;
+}
+
+.attention img {
+    width:90px;
+    height:90px;
+    float:left;
+    margin: 5px;
+}
+
+.attention .title {
+    font-size:1.2em;
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}

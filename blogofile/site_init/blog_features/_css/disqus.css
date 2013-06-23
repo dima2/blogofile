@@ -1,0 +1,38 @@
+#dsq-content .dsq-avatar img {
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    height: 36px;
+    width: 36px;
+    float: left;
+    margin-right: 5px;
+}
+
+#dsq-content .dsq-comment-header {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px 3px 3px 3px;
+    font-size: 13px;
+    line-height: 14px;
+    margin: 10px 0 0;
+    max-height: 36px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#dsq-comment-514406034.dsq-comment
+#dsq-content ul, #dsq-content li {
+    list-style-position: outside;
+    list-style-type: none;
+    padding-left: 0;
+}
+#dsq-comments
+#dsq-content ul, #dsq-content li {
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+#dsq-comments {
+    padding: 0;
+}

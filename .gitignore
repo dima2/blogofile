@@ -13,6 +13,8 @@ _site/
 _documentation/themes/blogofile/layout.html
 _top.json
 _posts/
+_pages/
+_drafts/
 uploads/
 downloads/
 _profile
