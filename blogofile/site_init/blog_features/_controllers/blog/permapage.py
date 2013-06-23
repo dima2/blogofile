@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import urlparse
 from blogofile.cache import bf
 import re
@@ -35,4 +36,4 @@ def write_permapages():
             env['next_post'] = blog.posts[i - 1]
         
         bf.writer.materialize_template(
-                "permapage.mako", bf.util.path_join(path, "index.html"), env)
+                "permapage.mako", path, env)

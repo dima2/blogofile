@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 """
 post.py parses post sources from the ./_post directory.
 """
@@ -21,10 +22,20 @@ import pytz
 import yaml
 import logging
 import BeautifulSoup
+import tidy
+import urllib
 
 import blogofile_bf as bf
 
+from django.utils.encoding import smart_str
+
 logger = logging.getLogger("blogofile.post")
+#logger.setLevel(logging.DEBUG)
+# hdlr = logging.FileHandler('post.log')
+# formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+# hdlr.setFormatter(formatter)
+# logger.addHandler(hdlr) 
+
 
 config = bf.config.controllers.blog.post
 config.mod = sys.modules[globals()["__name__"]]
@@ -34,10 +45,11 @@ config.mod = sys.modules[globals()["__name__"]]
 # than the one stated.
 reserved_field_names = {
     "title"      :"A one-line free-form title for the post",
+    "tagline"    : "The idea behind the concept is to create a memorable phrase that will sum up the tone and premise of a brand or product (like a film), or to reinforce the audience's memory of a product.",
     "date"       :"The date that the post was originally created",
     "updated"    :"The date that the post was last updated",
-    "categories" :"A list of categories that the post pertains to, "\
-        "each seperated by commas",
+    "description":"Short description of post",
+    "catags" :"Ctegories + Tags",
     "tags"       :"A list of tags that the post pertains to, "\
         "each seperated by commas",
     "permalink"  :"The full permanent URL for this post. "\
@@ -58,7 +70,9 @@ reserved_field_names = {
     "source"     :"Reserved internally",
     "yaml"       :"Reserved internally",
     "content"    :"Reserved internally",
-    "filename"   :"Reserved internally"
+    "filename"   :"Reserved internally",
+    "id"   : "Unique id (for legacy wp_post_id support)",
+    "disqus_identifier":"disqus_identifier"
     }
 
 
@@ -79,11 +93,11 @@ class Post(object):
         self.source = source
         self.yaml = None
         self.title = None
+        self.tagline = None
         self.__timezone = bf.config.controllers.blog.timezone
         self.date = None
         self.updated = None
-        self.categories = set()
-        self.tags = set()
+        self.catags = set()
         self.permalink = None
         self.content = u""
         self.excerpt = u""
@@ -91,8 +105,11 @@ class Post(object):
         self.author = ""
         self.guid = None
         self.slug = None
+        self.description = ""
         self.draft = False
         self.filters = None
+        self.id = None
+        self.disqus_identifier=""
         self.__parse()
         self.__post_process()
         
@@ -114,6 +131,12 @@ class Post(object):
         self.__apply_filters(post_src)
         #Do post excerpting
         self.__parse_post_excerpting()
+        self.content=re.sub(r"<!--more (.*?)-->",r"\1",self.content)
+        
+        if self.description=="":
+            clear_content=re.sub(r"<.*?>", "", self.content).replace("\n","")
+            self.description = " ".join(clear_content.split(" ")[:30])
+            logger.debug(self.description)
 
     def __apply_filters(self, post_src):
         """Apply filters to the post"""
@@ -144,26 +167,32 @@ class Post(object):
         #Can be overridden in _config.py by
         #defining post_excerpt(content,num_words)
         if len(self.excerpt) == 0:
-             """Retrieve excerpt from article"""
-             s = BeautifulSoup.BeautifulSoup(self.content)
-             # get rid of javascript, noscript and css
-             [[tree.extract() for tree in s(elem)] for elem in (
-                     'script', 'noscript', 'style')]
-             # get rid of doctype
-             subtree = s.findAll(text=re.compile("DOCTYPE|xml"))
-             [tree.extract() for tree in subtree]
-             # remove headers
-             [[tree.extract() for tree in s(elem)] for elem in (
-                     'h1', 'h2', 'h3', 'h4', 'h5', 'h6')]
-             text = ''.join(s.findAll(text=True))\
-                                 .replace("\n", "").split(" ")
-             return " ".join(text[:num_words]) + '...'
+          post_excerpt=self.content
+          if post_excerpt.count("<!--more")>0:
+            link_text=re.findall(r'<!--more\ (.*)-->',post_excerpt)
+            if not link_text:
+              link_text="Read more"
+            else:
+              link_text=link_text[0]
+            link='<a  class="more-link" href="%s">%s</a>' % (self.permalink,link_text)
+            post_excerpt=post_excerpt.split("<!--more")[0]+link
+            post_excerpt=str(tidy.parseString(post_excerpt, show_body_only=True)).decode('utf-8')
+
+            #make full links
+            post_excerpt=post_excerpt.replace("href='#","href='"+self.permalink+"#")
+            post_excerpt=post_excerpt.replace("href=\"#","href=\""+self.permalink+"#")
+
+          return post_excerpt
         
     def __post_process(self):
         # fill in empty default value
         if not self.title:
             self.title = u"Untitled - {0}".format(
                     datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+        self.id=int(self.filename.split("-")[0]) 
+
+        self.disqus_identifier=str(self.id)        
         
         if not self.slug:
             self.slug = re.sub("[ ?]", "-", self.title).lower()
@@ -173,8 +202,11 @@ class Post(object):
         if not self.updated:
             self.updated = self.date
 
-        if not self.categories or len(self.categories) == 0:
-            self.categories = set([Category('Uncategorized')])
+        if not self.description:
+            self.description = self.tagline
+
+        if not self.catags or len(self.catags) == 0:
+            self.catags = set([Catag('Uncategorized')])
         if not self.permalink and \
                 bf.config.controllers.blog.auto_permalink.enabled:
             self.permalink = bf.config.site.url.rstrip("/") + \
@@ -233,20 +265,20 @@ class Post(object):
         except KeyError:
             pass
         try:
-            self.categories = set([Category(x.strip()) for x in \
+            self.catags = set([Catag(x.strip(),"category") for x in \
                                        y['categories'].split(",")])
+            self.catags.update(set([Catag(x.strip().lower(),"tag") for x in \
+                                       y['tags'].split(",")]))
+
         except:
             pass
-        try:
-            self.tags = set([x.strip() for x in y['tags'].split(",")])
-        except:
-            pass
+
         try:
             self.filters = y['filter'] #filter is a synonym for filters
         except KeyError:
             pass
         try:
-            if y['draft']:
+            if y['draft'] and bf.config.site.url!="http://localhost:8080":
                 self.draft = True
                 logger.info(u"Post {0} is set to draft, "
                         "ignoring this post".format(self.filename))
@@ -258,10 +290,39 @@ class Post(object):
         for field, value in y.items():
             if field not in fields_need_processing:
                 setattr(self,field,value)
+
+    def getCatags(self,type):
+        result = []
+        for catag in self.catags:
+            if catag.type==type:
+                result.append(catag)
+
+        return result
+
+    def tags(self):
+        return self.getCatags('tag')
+
+    def categories(self):
+        return self.getCatags('category')
+
+    def tags_str(self):
+        result = ""
+        for tag in self.catags:
+            if tag.type=='tag':
+                result=result+tag.name+","
+
+        return result.rstrip(",")
+
+    def categories_str(self):
+        pass
         
     def permapath(self):
         """Get just the path portion of a permalink"""
         return urlparse.urlparse(self.permalink)[2]
+
+    def shortlink(self):
+        """Get the short url for a post"""
+        return bf.config.site.url+"/p/"+str(self.id)
 
     def __cmp__(self, other_post):
         "Posts should be comparable by date"
@@ -278,20 +339,22 @@ class Post(object):
             raise AttributeError, name
 
 
-class Category(object):
+class Catag(object):
 
-    def __init__(self, name):
+    def __init__(self, name, type):
         self.name = unicode(name)
-        # TODO: slugification should be abstracted out somewhere reusable
+        self.type = type
+        self.cnt = 0
+        self.em = 1.0
         # TODO: consider making url_name and path read-only properties?
         self.url_name = self.name.lower().replace(" ", "-")
         self.path = bf.util.site_path_helper(
                 bf.config.controllers.blog.path,
-                bf.config.controllers.blog.category_dir,
-                self.url_name)
+                type,
+                self.url_name+".html")
 
     def __eq__(self, other):
-        if self.name == other.name:
+        if self.name == other.name and self.type == other.type:
             return True
         return False
 
@@ -311,7 +374,7 @@ def parse_posts(directory):
     Returns a list of the posts sorted in reverse by date."""
     posts = []
     post_filename_re = re.compile(
-        ".*((\.textile$)|(\.markdown$)|(\.org$)|(\.html$)|(\.txt$)|(\.rst$))")
+        ".*((\.textile$)|(\.markdown$)|(\.org$)|(\.html$)|(\.txt$)|(\.rst$)|(\.md$))")
     if not os.path.isdir("_posts"):
         logger.warn("This site has no _posts directory.")
         return []
@@ -331,6 +394,9 @@ def parse_posts(directory):
             logger.exception(u"Error reading post: {0}".format(post_path))
             raise
         try:
+
+            src=src.replace("permalink: "+bf.config.controllers.blog.old_url, "permalink: "+bf.config.controllers.blog.url)
+
             p = Post(src, filename=post_fn)
         except PostParseException as e:
             logger.warning(u"{0} : Skipping this post.".format(e.value))
