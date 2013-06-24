@@ -1,6 +1,6 @@
 #!/bin/bash
-#sudo apt-get install uglifyjs cssoptimizer trimage
 echo "buildin..."
+
 cd blog_features
 
 #set profile for blogofile
