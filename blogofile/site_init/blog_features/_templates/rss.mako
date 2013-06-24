@@ -7,9 +7,9 @@
      xmlns:wfw="http://wellformedweb.org/CommentAPI/"
      >
   <channel>
-    <title>${bf.config.blog.name}</title>
+    <title>${bf.config.blog.name.decode('UTF-8')}</title>
     <link>${bf.config.blog.url}</link>
-    <description>${bf.config.blog.description}</description>
+    <description>${bf.config.blog.description.decode('UTF-8')}</description>
     <pubDate>${datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")}</pubDate>
     <generator>Blogofile</generator>
     <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -19,7 +19,7 @@
       <title>${post.title}</title>
       <link>${post.permalink}</link>
       <pubDate>${post.date.strftime("%a, %d %b %Y %H:%M:%S %Z")}</pubDate>
-% for category in post.categories:
+% for category in post.categories():
       <category><![CDATA[${category}]]></category>
 % endfor
 % if post.guid:

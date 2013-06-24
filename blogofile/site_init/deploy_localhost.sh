@@ -2,7 +2,7 @@
 cd $(dirname "${BASH_SOURCE[0]}")
 ./build.sh
 
-cd blogofile
+cd blog_features
 blogofile serve
 cd -
 
