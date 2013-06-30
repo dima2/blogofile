@@ -516,6 +516,15 @@ a.download-button:hover {
    left: 1px;
 }
 
+.centered {
+  text-align: center;
+}
+
+.padded {
+  padding: 10px;
+}
+
+
 a.github {
   padding: 5px 10px 5px 30px !important;
   background: #EAEAEA no-repeat !important;

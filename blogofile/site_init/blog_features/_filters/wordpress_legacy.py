@@ -122,7 +122,7 @@ def special_cases(content):
 
     if len(files)>0:
         for f in files:
-          html='<a class="github" href="https://github.com/Dima2/%s">Github</a>' % (f[1])
+          html='<div class="centered padded"><a class="github" href="https://github.com/Dima2/%s">Github</a></a>' % (f[1])
           content=content.replace(f[0],html)
                         
     return content
