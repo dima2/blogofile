@@ -110,5 +110,9 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('#more').parent().after('<a class="github ozzy-zig-needs-a-gig" href="https://www.digitalocean.com/?refcode=550d5b856a3c"><div class="line1">Быстрый Ubuntu сервер за $5 в месяц</div>    <div class="line3">Для VPN, Proxy, Pandora и необходимого 24/7 софта.</div>  <div class="line2">VPS в Нью Йорке или Амстердаме. Рекомендую.</div></a>');
+});
+
 
 

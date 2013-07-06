@@ -131,7 +131,7 @@ class Post(object):
         self.__apply_filters(post_src)
         #Do post excerpting
         self.__parse_post_excerpting()
-        self.content=re.sub(r"<!--more (.*?)-->",r"\1",self.content)
+        self.content=re.sub(r"<!--more (.*?)-->",r"<span id='more'></span>\1",self.content)
         
         if self.description=="":
             clear_content=re.sub(r"<.*?>", "", self.content).replace("\n","")
@@ -174,7 +174,7 @@ class Post(object):
               link_text="Read more"
             else:
               link_text=link_text[0]
-            link='<a  class="more-link" href="%s">%s</a>' % (self.permalink,link_text)
+            link='<a  class="more-link" href="%s#more">%s</a>' % (self.permalink,link_text)
             post_excerpt=post_excerpt.split("<!--more")[0]+link
             post_excerpt=str(tidy.parseString(post_excerpt, show_body_only=True)).decode('utf-8')
 

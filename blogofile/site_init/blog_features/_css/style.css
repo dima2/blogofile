@@ -40,6 +40,14 @@ h1, h2, h3 {
   float: left
 }
 
+.centered {
+  text-align: center;
+}
+
+.padded {
+  padding: 10px;
+}
+
 /* Textareas */
 
 #main input,textarea {
@@ -516,15 +524,6 @@ a.download-button:hover {
    left: 1px;
 }
 
-.centered {
-  text-align: center;
-}
-
-.padded {
-  padding: 10px;
-}
-
-
 a.github, a.github_big {
   padding: 5px 10px 5px 30px !important;
   background: #EAEAEA no-repeat !important;
@@ -552,8 +551,24 @@ a.github:hover, a.github_big:hover {
   background-color:auto !important; 
   border-color: #51A7E8 !important;
   box-shadow: 0 0 5px rgba(81, 167, 232, 0.5) !important;
+  text-shadow: 0 0 3px rgba(81, 167, 232, 0.3) !important;
   text-decoration: none !important;
 }
+
+a.ozzy-zig-needs-a-gig {
+  font: "Times New Roman", Times, serif !important;
+  display: block !important;
+  padding: 5px 10px 5px 70px !important;
+  background: #EAEAEA no-repeat !important;
+  background-position: 9px 6px, 0px, 0px !important;
+  background-image: url('images/terminal3.png'), linear-gradient(#FAFAFA, #EAEAEA) !important;
+  text-align: center !important;
+  margin: 5px 0px 15px !important;
+}
+
+.ozzy-zig-needs-a-gig .line1 {font-size:1.5em;}
+.ozzy-zig-needs-a-gig .line2 {font-size:1.1em;}
+.ozzy-zig-needs-a-gig .line3 {font-size:1.1em;}
 
 
 
