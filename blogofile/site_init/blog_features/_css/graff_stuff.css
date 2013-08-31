@@ -252,3 +252,19 @@ font-weight:bold;
 .ttipz a, .ttipz a:visited {
     color:#0A4C75;
 }
+
+.rotato:hover {
+  transform:rotate(360deg);
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+
+#logogo, .half-rotato {
+  transform:rotate(0deg);
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+
+#logogo:hover, .half-rotato:hover {
+  transform:rotate(180deg);
+}

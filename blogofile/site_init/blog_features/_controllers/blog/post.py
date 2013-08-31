@@ -181,6 +181,7 @@ class Post(object):
             #make full links
             post_excerpt=post_excerpt.replace("href='#","href='"+self.permalink+"#")
             post_excerpt=post_excerpt.replace("href=\"#","href=\""+self.permalink+"#")
+            post_excerpt=post_excerpt.replace("href=\n\"#","href=\n\""+self.permalink+"#")
 
           return post_excerpt
         

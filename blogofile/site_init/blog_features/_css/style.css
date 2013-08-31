@@ -557,6 +557,7 @@ a.github:hover, a.github_big:hover {
 
 a.ozzy-zig-needs-a-gig {
   font: "Times New Roman", Times, serif !important;
+  font-weight: normal !important;
   display: block !important;
   padding: 5px 10px 5px 70px !important;
   background: #EAEAEA no-repeat !important;
@@ -566,9 +567,10 @@ a.ozzy-zig-needs-a-gig {
   margin: 5px 0px 15px !important;
 }
 
-.ozzy-zig-needs-a-gig .line1 {font-size:1.5em;}
-.ozzy-zig-needs-a-gig .line2 {font-size:1.1em;}
-.ozzy-zig-needs-a-gig .line3 {font-size:1.1em;}
+.ozzy-zig-needs-a-gig .line1 {font-size:1.6em;}
+.ozzy-zig-needs-a-gig .line2, .ozzy-zig-needs-a-gig .line3 {font-size:1.1em; color: #3B3B3B !important;}
+/*.ozzy-zig-needs-a-gig .ponjato {background-image: url('images/close.png') !important; width:14px; height:14px; float: right;}*/
+
 
 
 

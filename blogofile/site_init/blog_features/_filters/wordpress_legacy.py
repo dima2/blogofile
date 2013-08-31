@@ -144,10 +144,10 @@ def create_toc(content):
       
     
     for header in headers:      
-      title=header[2]
+      title=re.sub(r'<.*?>','',header[2])
       lvl=header[1]
       link=''.join(e for e in title if (e.isalnum() or e==" ")).lower().replace(" ","-")
-      linkedHeader="<h%s id='%s'>%s</h%s>" % (lvl,link,title,lvl)      
+      linkedHeader="<h%s id='%s'>%s</h%s>" % (lvl,link,header[2],lvl)      
       content=content.replace(header[0],linkedHeader)
       if toc:
         toc+='<li class="toc-level-%s"><a title="%s" href="#%s" rel="bookmark nofollow">%s</a></li>' % (lvl,title,link,title)

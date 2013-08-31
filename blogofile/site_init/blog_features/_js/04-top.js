@@ -8,27 +8,27 @@ function the_top() {
     dw('<li style="font-size:1.2em">');
     dw('<a style="color:#eee" href="http://thexnews.com/ubuntu-linux-vs-windows-vista.html">Ubuntu Linux vs Windows Vista</a>');
     dw('<div class="votescomments">');
-    dw('500 голосов');
+    dw('501 голосов');
       dw('/ <a href="http://thexnews.com/ubuntu-linux-vs-windows-vista.html#comments">380 комментов</a>');
     dw('</div>');
     dw('</li>');
     dw('<li style="font-size:1.2em">');
     dw('<a style="color:#eee" href="http://thexnews.com/софт-для-ubuntu-версия-2.html">Софт для Ubuntu: Версия 2</a>');
     dw('<div class="votescomments">');
-    dw('806 голосов');
+    dw('807 голосов');
     dw('</div>');
     dw('</li>');
     dw('<li style="font-size:0.9em">');
     dw('<a style="color:#eee" href="http://thexnews.com/sansa-clip-rockbox.html">Sansa Clip и альтернативная прошивка RockBox.</a>');
     dw('<div class="votescomments">');
-    dw('250 голосов');
-      dw('/ <a href="http://thexnews.com/sansa-clip-rockbox.html#comments">30 комментов</a>');
+    dw('263 голосов');
+      dw('/ <a href="http://thexnews.com/sansa-clip-rockbox.html#comments">32 комментов</a>');
     dw('</div>');
     dw('</li>');
     dw('<li style="font-size:0.9em">');
     dw('<a style="color:#eee" href="http://thexnews.com/wordpress-плагин-для-голосования-2.html">Wordpress плагин для голосования 2</a>');
     dw('<div class="votescomments">');
-    dw('268 голосов');
+    dw('276 голосов');
     dw('</div>');
     dw('</li>');
     dw('<li style="font-size:0.8em">');
@@ -47,7 +47,7 @@ function the_top() {
     dw('<li style="font-size:0.8em">');
     dw('<a style="color:#eee" href="http://thexnews.com/как-правильно-настроить-всплывающие.html">Как правильно настроить всплывающие уведомления Skype под Ubuntu</a>');
     dw('<div class="votescomments">');
-    dw('198 голосов');
+    dw('200 голосов');
     dw('</div>');
     dw('</li>');
   dw('</ul></div>');
@@ -125,27 +125,19 @@ function top_images() {
       items.push(post);
 
       var post = new Object();
-      post.image='http://thexnews.com/uploads/fastmail-150x.png';
-      post.url='http://thexnews.com/gmail-vs-альтернативы-vs-fastmail.html';
-      post.id='1153';
-      post.name='Как я ушел с Gmail и стал платить за электронную почту';
-      post.desc='';
-      items.push(post);
-
-      var post = new Object();
-      post.image='http://thexnews.com/uploads/cloudflare-ping-150x.png';
-      post.url='http://thexnews.com/ускоряем-загрузку-сайта-cloudflare-cdn.html';
-      post.id='1154';
-      post.name='Ускоряем загрузку сайта с помощью простого и бесплатного CDN от Cloudflare';
-      post.desc='\Е\щ\е\ \о\д\и\н\ \п\р\о\с\т\о\й\ \с\п\о\с\о\б\ \с\е\р\ь\е\з\н\о\ \у\с\к\о\р\и\т\ь\ \з\а\г\р\у\з\к\у\ \в\а\ш\е\г\о\ \с\а\й\т\а\ \с\ \п\о\м\о\щ\ь\ю\ \ \и\ \б\е\с\п\л\а\т\н\о\г\о\ CDN\ \о\т\ Cloudflare';
-      items.push(post);
-
-      var post = new Object();
       post.image='http://thexnews.com/uploads/seafile2-150x.png';
       post.url='http://thexnews.com/seafile-лучшая-альтернатива-dropbox.html';
       post.id='1155';
       post.name='Seafile, да это просто праздник какой-то!';
       post.desc='\П\р\а\в\и\л\ь\н\а\я\ \а\л\ь\т\е\р\н\а\т\и\в\а\ Dropbox\ \с\ \в\о\з\м\о\ж\н\о\с\т\ь\ю\ \з\а\п\у\с\к\а\ \н\а\ \с\в\о\е\м\ \с\е\р\в\е\р\е';
+      items.push(post);
+
+      var post = new Object();
+      post.image='http://thexnews.com/uploads/XBMC_home-150x.png';
+      post.url='http://thexnews.com/xbmc-на-втором-мониторе-телевизоре-не-захватывая-мышку.html';
+      post.id='1159';
+      post.name='Как запустить XBMC на втором мониторе/телевизоре не захватывая мышку';
+      post.desc='';
       items.push(post);
 
       var post = new Object();
