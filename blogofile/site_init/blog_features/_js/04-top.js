@@ -6,16 +6,31 @@ function dw(str) {
 function the_top() {
   dw('<div class="votewidget_skin"><ul>');
     dw('<li style="font-size:1.2em">');
+    dw('<a style="color:#eee" href="http://thexnews.com/софт-для-ubuntu-версия-2.html">Софт для Ubuntu: Версия 2</a>');
+    dw('<div class="votescomments">');
+    dw('807 голосов');
+      dw('/ <a href="http://thexnews.com/софт-для-ubuntu-версия-2.html#comments">98 комментов</a>');
+    dw('</div>');
+    dw('</li>');
+    dw('<li style="font-size:1.2em">');
     dw('<a style="color:#eee" href="http://thexnews.com/ubuntu-linux-vs-windows-vista.html">Ubuntu Linux vs Windows Vista</a>');
     dw('<div class="votescomments">');
     dw('501 голосов');
       dw('/ <a href="http://thexnews.com/ubuntu-linux-vs-windows-vista.html#comments">380 комментов</a>');
     dw('</div>');
     dw('</li>');
-    dw('<li style="font-size:1.2em">');
-    dw('<a style="color:#eee" href="http://thexnews.com/софт-для-ubuntu-версия-2.html">Софт для Ubuntu: Версия 2</a>');
+    dw('<li style="font-size:0.9em">');
+    dw('<a style="color:#eee" href="http://thexnews.com/wordpress-плагин-для-голосования-2.html">Wordpress плагин для голосования 2</a>');
     dw('<div class="votescomments">');
-    dw('807 голосов');
+    dw('276 голосов');
+      dw('/ <a href="http://thexnews.com/wordpress-плагин-для-голосования-2.html#comments">50 комментов</a>');
+    dw('</div>');
+    dw('</li>');
+    dw('<li style="font-size:0.9em">');
+    dw('<a style="color:#eee" href="http://thexnews.com/как-правильно-настроить-всплывающие.html">Как правильно настроить всплывающие уведомления Skype под Ubuntu</a>');
+    dw('<div class="votescomments">');
+    dw('200 голосов');
+      dw('/ <a href="http://thexnews.com/как-правильно-настроить-всплывающие.html#comments">112 комментов</a>');
     dw('</div>');
     dw('</li>');
     dw('<li style="font-size:0.9em">');
@@ -25,10 +40,11 @@ function the_top() {
       dw('/ <a href="http://thexnews.com/sansa-clip-rockbox.html#comments">32 комментов</a>');
     dw('</div>');
     dw('</li>');
-    dw('<li style="font-size:0.9em">');
-    dw('<a style="color:#eee" href="http://thexnews.com/wordpress-плагин-для-голосования-2.html">Wordpress плагин для голосования 2</a>');
+    dw('<li style="font-size:0.8em">');
+    dw('<a style="color:#eee" href="http://thexnews.com/док-удобная-замена-панели-задач.html">Док - удобная замена панели задач</a>');
     dw('<div class="votescomments">');
-    dw('276 голосов');
+    dw('213 голосов');
+      dw('/ <a href="http://thexnews.com/док-удобная-замена-панели-задач.html#comments">50 комментов</a>');
     dw('</div>');
     dw('</li>');
     dw('<li style="font-size:0.8em">');
@@ -36,18 +52,6 @@ function the_top() {
     dw('<div class="votescomments">');
     dw('198 голосов');
       dw('/ <a href="http://thexnews.com/ubuntu-faq.html#comments">39 комментов</a>');
-    dw('</div>');
-    dw('</li>');
-    dw('<li style="font-size:0.8em">');
-    dw('<a style="color:#eee" href="http://thexnews.com/док-удобная-замена-панели-задач.html">Док - удобная замена панели задач</a>');
-    dw('<div class="votescomments">');
-    dw('213 голосов');
-    dw('</div>');
-    dw('</li>');
-    dw('<li style="font-size:0.8em">');
-    dw('<a style="color:#eee" href="http://thexnews.com/как-правильно-настроить-всплывающие.html">Как правильно настроить всплывающие уведомления Skype под Ubuntu</a>');
-    dw('<div class="votescomments">');
-    dw('200 голосов');
     dw('</div>');
     dw('</li>');
   dw('</ul></div>');
@@ -69,14 +73,6 @@ function top_images() {
       items.push(post);
 
       var post = new Object();
-      post.image='http://thexnews.com/uploads/rockdoom.png';
-      post.url='http://thexnews.com/sansa-clip-rockbox.html';
-      post.id='969';
-      post.name='Sansa Clip и альтернативная прошивка RockBox.';
-      post.desc='\В\и\д\е\о\ \с\ Doo\м\ \в\ \п\л\е\е\р\е\-\п\р\и\щ\е\п\к\е\.\ 3\ \ц\в\е\т\а\ \и\ \р\а\з\р\е\ш\е\н\и\е\ 128\х64\.';
-      items.push(post);
-
-      var post = new Object();
       post.image='uploads/vote1-150x63.jpg';
       post.url='http://thexnews.com/wordpress-плагин-для-голосования-2.html';
       post.id='192';
@@ -85,11 +81,19 @@ function top_images() {
       items.push(post);
 
       var post = new Object();
-      post.image='uploads/ubuntu-faq-150x150.png';
-      post.url='http://thexnews.com/ubuntu-faq.html';
-      post.id='186';
-      post.name='Ubuntu FAQ';
-      post.desc='\Р\е\ш\е\н\и\е\ \н\а\и\б\о\л\е\е\ \ч\а\с\т\ы\х\ \п\о\ \м\о\е\м\у\ \о\п\ы\т\у\ \п\р\о\б\л\е\м\ \с\в\я\з\а\н\н\ы\х\ \с\ Ubuntu\ Linux\.';
+      post.image='uploads/notify-150x150.gif';
+      post.url='http://thexnews.com/как-правильно-настроить-всплывающие.html';
+      post.id='554';
+      post.name='Как правильно настроить всплывающие уведомления Skype под Ubuntu';
+      post.desc='\Н\а\к\о\н\е\ц\-\т\о\ \н\о\в\ы\й\ \С\к\а\й\п\ \п\о\д\д\е\р\ж\и\в\а\е\т\ \о\ф\о\р\м\л\е\н\и\е\ Qt\.\ \П\о\т\и\х\о\н\ь\к\у\ \п\р\о\г\р\а\м\м\а\ \с\т\а\н\о\в\и\т\с\я\ \б\о\л\е\е\-\м\е\н\е\е\ \ю\з\а\б\е\л\ь\н\о\й\,\ \н\о\ \к\о\с\я\к\о\в\ \е\щ\е\ \м\н\о\г\о\.\ \Н\а\п\р\и\м\е\р\,\ \к\о\г\д\а\ \в\а\м\ \п\р\и\х\о\д\я\т\ \с\о\о\б\щ\е\н\и\я\ \в\ Linux\'\о\в\ы\й\ \С\к\а\й\п\,\ \о\н\и\ \п\о\я\в\л\я\ю\т\с\я\ \г\д\е\-\т\о\ \с\б\о\к\у\-\с\н\и\з\у\,\ \ч\т\о\ \в\ы\г\л\я\д\и\т\ \у\ж\а\с\н\о\.';
+      items.push(post);
+
+      var post = new Object();
+      post.image='http://thexnews.com/uploads/rockdoom.png';
+      post.url='http://thexnews.com/sansa-clip-rockbox.html';
+      post.id='969';
+      post.name='Sansa Clip и альтернативная прошивка RockBox.';
+      post.desc='\В\и\д\е\о\ \с\ Doo\м\ \в\ \п\л\е\е\р\е\-\п\р\и\щ\е\п\к\е\.\ 3\ \ц\в\е\т\а\ \и\ \р\а\з\р\е\ш\е\н\и\е\ 128\х64\.';
       items.push(post);
 
       var post = new Object();
@@ -101,11 +105,11 @@ function top_images() {
       items.push(post);
 
       var post = new Object();
-      post.image='uploads/notify-150x150.gif';
-      post.url='http://thexnews.com/как-правильно-настроить-всплывающие.html';
-      post.id='554';
-      post.name='Как правильно настроить всплывающие уведомления Skype под Ubuntu';
-      post.desc='\Н\а\к\о\н\е\ц\-\т\о\ \н\о\в\ы\й\ \С\к\а\й\п\ \п\о\д\д\е\р\ж\и\в\а\е\т\ \о\ф\о\р\м\л\е\н\и\е\ Qt\.\ \П\о\т\и\х\о\н\ь\к\у\ \п\р\о\г\р\а\м\м\а\ \с\т\а\н\о\в\и\т\с\я\ \б\о\л\е\е\-\м\е\н\е\е\ \ю\з\а\б\е\л\ь\н\о\й\,\ \н\о\ \к\о\с\я\к\о\в\ \е\щ\е\ \м\н\о\г\о\.\ \Н\а\п\р\и\м\е\р\,\ \к\о\г\д\а\ \в\а\м\ \п\р\и\х\о\д\я\т\ \с\о\о\б\щ\е\н\и\я\ \в\ Linux\'\о\в\ы\й\ \С\к\а\й\п\,\ \о\н\и\ \п\о\я\в\л\я\ю\т\с\я\ \г\д\е\-\т\о\ \с\б\о\к\у\-\с\н\и\з\у\,\ \ч\т\о\ \в\ы\г\л\я\д\и\т\ \у\ж\а\с\н\о\.';
+      post.image='uploads/ubuntu-faq-150x150.png';
+      post.url='http://thexnews.com/ubuntu-faq.html';
+      post.id='186';
+      post.name='Ubuntu FAQ';
+      post.desc='\Р\е\ш\е\н\и\е\ \н\а\и\б\о\л\е\е\ \ч\а\с\т\ы\х\ \п\о\ \м\о\е\м\у\ \о\п\ы\т\у\ \п\р\о\б\л\е\м\ \с\в\я\з\а\н\н\ы\х\ \с\ Ubuntu\ Linux\.';
       items.push(post);
 
       var post = new Object();
@@ -125,6 +129,14 @@ function top_images() {
       items.push(post);
 
       var post = new Object();
+      post.image='http://thexnews.com/uploads/apple-vs-samsung-300x.jpg';
+      post.url='http://thexnews.com/обзор-ubuntu-for-arm-на-samsung-chromebook.html';
+      post.id='1152';
+      post.name='Обзор Ubuntu for ARM на Samsung Chromebook';
+      post.desc='\О\б\з\о\р\ \н\а\ш\у\м\е\в\ш\е\г\о\ Chromebook\ \з\а\ \$249\ \о\т\ Samsung\,\ \к\о\т\о\р\ы\й\ \у\ж\ \о\ч\е\н\ь\ \п\о\х\о\ж\ \н\а\ Macbook\ Air\.\ \П\о\п\ы\т\к\а\ \п\о\с\т\а\в\и\т\ь\ \т\у\д\а\ Ubuntu\ for\ Arm\ \и\ \п\е\р\в\ы\е\ \в\п\е\ч\а\т\л\е\н\и\я\.';
+      items.push(post);
+
+      var post = new Object();
       post.image='http://thexnews.com/uploads/seafile2-150x.png';
       post.url='http://thexnews.com/seafile-лучшая-альтернатива-dropbox.html';
       post.id='1155';
@@ -138,14 +150,6 @@ function top_images() {
       post.id='1159';
       post.name='Как запустить XBMC на втором мониторе/телевизоре не захватывая мышку';
       post.desc='';
-      items.push(post);
-
-      var post = new Object();
-      post.image='http://thexnews.com/uploads/apple-vs-samsung-300x.jpg';
-      post.url='http://thexnews.com/обзор-ubuntu-for-arm-на-samsung-chromebook.html';
-      post.id='1152';
-      post.name='Обзор Ubuntu for ARM на Samsung Chromebook';
-      post.desc='\О\б\з\о\р\ \н\а\ш\у\м\е\в\ш\е\г\о\ Chromebook\ \з\а\ \$249\ \о\т\ Samsung\,\ \к\о\т\о\р\ы\й\ \у\ж\ \о\ч\е\н\ь\ \п\о\х\о\ж\ \н\а\ Macbook\ Air\.\ \П\о\п\ы\т\к\а\ \п\о\с\т\а\в\и\т\ь\ \т\у\д\а\ Ubuntu\ for\ Arm\ \и\ \п\е\р\в\ы\е\ \в\п\е\ч\а\т\л\е\н\и\я\.';
       items.push(post);
 
   items.sort(shuffle);

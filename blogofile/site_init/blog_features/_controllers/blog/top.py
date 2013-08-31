@@ -41,8 +41,10 @@ def run():
         champ['votes']=top_posts[post_id]
       else:
         champ['votes']=0
-      if post.permapath() in blog.comments:
-        champ['comments']=len(blog.comments[post.permapath()])
+
+      permalink = smart_str(post.permapath())
+      if permalink in blog.comments:
+        champ['comments']=len(blog.comments[permalink])
       else:
         champ['comments']=0
       champ['url']=post.permalink
