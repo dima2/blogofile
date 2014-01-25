@@ -2,8 +2,11 @@
 cd $(dirname "${BASH_SOURCE[0]}")
 ./build.sh
 
-cd blog_features
-killall blogofile
-blogofile serve&
-cd -
+pwd
+if [ -z "$(pgrep twistd)" ]
+then
+  echo "Starting twistd server"
+  twistd -no web --path=blog_features/_site
+fi
+
 

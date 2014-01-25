@@ -6,7 +6,7 @@ http://thexnews.com/статический-блог-blogofile.html
 
 ##Install
     #install dependencies
-    sudo apt-get install python-setuptools python-django
+    sudo apt-get install python-setuptools python-django python-twisted-web
     sudo apt-get install node-uglify python-utidylib
 
     #install cssoptimizer
