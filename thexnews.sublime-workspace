@@ -1,0 +1,768 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bore",
+				"border"
+			],
+			[
+				"ski",
+				"skip_marek (global, instance)"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"flat_",
+				"flat_mode"
+			],
+			[
+				"b",
+				"border-spacing"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"e",
+				"exists (local, instance)"
+			],
+			[
+				"spe",
+				"speaker (local, instance)"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"c",
+				"col (global, instance)"
+			],
+			[
+				"s",
+				"split"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"o",
+				"overflow"
+			],
+			[
+				"m",
+				"mylookup"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"re",
+				"return (keyword, instance)"
+			],
+			[
+				"pos",
+				"posts (local, instance)"
+			],
+			[
+				"p",
+				"post"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"a",
+				"alert"
+			],
+			[
+				"log",
+				"logging (imported, module)"
+			],
+			[
+				"the",
+				"thexnews"
+			],
+			[
+				"ek",
+				"else (keyword, instance)"
+			],
+			[
+				"lo",
+				"logger (global, instance)"
+			],
+			[
+				"to",
+				"tocr (local, instance)"
+			],
+			[
+				"cete",
+				"category (local, instance)"
+			],
+			[
+				"lin",
+				"links (local, instance)"
+			],
+			[
+				"f",
+				"file (local, instance)"
+			],
+			[
+				"pr",
+				"print (builtin, function)"
+			],
+			[
+				"po",
+				"post (local, instance)"
+			],
+			[
+				"rea",
+				"readyPosts (local, instance)"
+			],
+			[
+				"comme",
+				"comment"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"pe",
+				"permalink (attribute, instance)"
+			],
+			[
+				"de",
+				"decode (builtin, function)"
+			],
+			[
+				"repl",
+				"replace"
+			],
+			[
+				"nex",
+				"next_link (local, instance)"
+			],
+			[
+				"ce",
+				"cell2 (global, instance)"
+			],
+			[
+				"fro",
+				"formula (global, instance)"
+			],
+			[
+				"ex",
+				"except (keyword, instance)"
+			],
+			[
+				"r",
+				"raw_input (builtin, function)"
+			],
+			[
+				"els",
+				"else (keyword, instance)"
+			],
+			[
+				"ao",
+				"api (global, instance)"
+			],
+			[
+				"w",
+				"write (builtin, function)"
+			],
+			[
+				"el",
+				"else (keyword, instance)"
+			],
+			[
+				"eve",
+				"event (global, instance)"
+			],
+			[
+				"pt",
+				"print (builtin, function)"
+			],
+			[
+				"Hi",
+				"History"
+			],
+			[
+				"fo",
+				"format (attribute, instance)"
+			],
+			[
+				"td",
+				"tdd"
+			],
+			[
+				"du",
+				"duration"
+			],
+			[
+				"va",
+				"validSongs"
+			]
+		]
+	},
+	"build_system": "Build Project",
+	"command_palette":
+	{
+		"height": 285.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"go",
+				"Rope: Go to Definition"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rop",
+				"Rope: Go to Definition"
+			],
+			[
+				"rope",
+				"Rope: Go to Definition"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Paca",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 157.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/media/archive/stuff/calibre/Wendy Northcutt/The Darwin Awards - Evolution in Action (77)/The Darwin Awards - Evolution in Action - Wendy Northcutt.mobi",
+		"/home/graf/projects/web/blog/build.sh",
+		"/home/graf/projects/web/javadayriga/_templates/skeleton.mako",
+		"/home/graf/incoming/nivo-slider3.1/nivo-slider/_site/demo2.html",
+		"/home/graf/incoming/nivo-slider3.1/nivo-slider/themes/default/default.css",
+		"/home/graf/projects/web/javadayriga/_css/main.css",
+		"/home/graf/projects/web/blog/deploy_production.sh",
+		"/home/graf/projects/web/javadayriga/build.py",
+		"/home/graf/projects/web/javadayriga/_templates/talks.mako",
+		"/home/graf/projects/web/javadayriga/deploy_production.sh",
+		"/home/graf/incoming/nivo-slider3.1/nivo-slider/demo/demo.html",
+		"/home/graf/projects/web/javadayriga/_site/index.html",
+		"/home/graf/projects/web/javadayriga/_js/main.js",
+		"/home/graf/projects/python/one_time/camelcase.py",
+		"/home/graf/projects/web/javadayriga/_templates/sponsors2.mako",
+		"/home/graf/bin/upd",
+		"/home/graf/projects/web/javadayriga/_templates/register.mako",
+		"/home/graf/projects/web/javadayriga/_templates/venue.mako",
+		"/home/graf/projects/web/javadayriga/_templates/speakers.mako",
+		"/home/graf/projects/web/javadayriga/_templates/schedule.mako",
+		"/home/graf/projects/web/javadayriga/_templates/sponsors.mako",
+		"/home/graf/incoming/music/interface.py",
+		"/home/graf/projects/web/javadayriga/_templates/menu.mako",
+		"/home/graf/projects/web/javadayriga/_templates/index.mako",
+		"/home/graf/projects/web/javadayriga/_css/style.css",
+		"/home/graf/projects/web/javadayriga/web/style.css",
+		"/home/graf/projects/web/javadayriga/web/css/gumby.12col.css",
+		"/home/graf/projects/web/javadayriga/web/dot.htaccess",
+		"/home/graf/projects/web/javadayriga/_site/style.css",
+		"/home/graf/projects/web/javadayriga/_templates/404.mako",
+		"/home/graf/projects/web/javadayriga/deploy_test.sh",
+		"/home/graf/projects/web/javadayriga/speakers.csv",
+		"/home/graf/projects/web/javadayriga/deploy_localhost.sh",
+		"/home/graf/projects/web/javadayriga/javadayriga.sublime-project",
+		"/home/graf/projects/web/javadayriga/build.sh",
+		"/home/graf/projects/web/javadayriga/schedule.csv",
+		"/home/graf/projects/web/javadayriga/style.css",
+		"/home/graf/projects/web/javadayriga/_templates/sidebar.mako",
+		"/home/graf/projects/web/javadayriga/_site/build.py",
+		"/home/graf/projects/web/javadayriga/old.css",
+		"/home/graf/projects/web/javadayriga/js/main.js",
+		"/home/graf/incoming/gumby_master/Framework/demo.html",
+		"/home/graf/projects/web/javadayriga/speakers.py",
+		"/home/graf/projects/web/javadayriga/_static/style.css",
+		"/home/graf/javadayriga/_css/style.css",
+		"/home/graf/projects/web/javadayriga/css/style.css",
+		"/home/graf/projects/web/javadayriga/_css/1_style.css",
+		"/home/graf/projects/web/javadayriga/_site/template.html",
+		"/home/graf/projects/web/blog/deploy_localhost.sh",
+		"/home/graf/projects/web/javadayriga/_templates/index.mako.py",
+		"/home/graf/projects/web/blog/deploy_test.sh",
+		"/home/graf/projects/web/javadayriga/template.html",
+		"/home/graf/projects/web/jug/javadayriga2012/index.mako",
+		"/home/graf/projects/web/jug/javadayriga2012/build.py",
+		"/home/graf/projects/web/javadayriga/css/import12.css",
+		"/home/graf/projects/web/javadayriga/css/imports.css",
+		"/home/graf/incoming/gumby_master/Framework/css/ui.css",
+		"/home/graf/incoming/gumby_master/Framework/css/text.css",
+		"/home/graf/incoming/gumby_master/Framework/css/style.css",
+		"/home/graf/incoming/gumby_master/Framework/css/import12.css",
+		"/home/graf/incoming/gumby_master/Framework/index.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/1149-voting.md",
+		"/home/graf/projects/web/blog/blogofile/_uploads/doom7.png~~~",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_drafts/9999-doom2.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/1150-optimize.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/1147-blog.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/1148-yandex-buttons.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/0969-sansa_clip_и_альтернативная_прошивка_rockbox..html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/1052-teuxdeux__идеальный_список_задач_для_людей_не_помешанных_на_gtd.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/0956-радикальное_решение_проблемы_шума_компьютера.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/top.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_controllers/blog/top.py",
+		"/media/archive/games/doom/brutal/BrutalDoomRegeneration.wad",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_drafts/doom2.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_css/votestyles.css",
+		"/home/graf/projects/web/blog/blogofile/_js/04-top.js",
+		"/home/graf/projects/web/blog/blogofile/_site/dirtydeeds.js",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_drafts/template.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_controllers/blog/post.py",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/post.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/0060-софт_для_ubuntu.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_js/10-dirtydeeds.js",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/header.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_css/style.css",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_filters/wordpress_legacy.py",
+		"/home/graf/projects/web/git/thexnews.com/build.sh",
+		"/home/graf/projects/web/git/thexnews.com/deploy_test.sh",
+		"/home/graf/projects/web/git/thexnews.com/_threads.json",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/socials.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_css/1984.css",
+		"/home/graf/projects/web/blog/blogofile/_posts/0372-uzbl.html",
+		"/home/graf/projects/web/blog/blogofile/_pages/0380-uzbl_настройка_и_установка.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/footer.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/chronological.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/permapage.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_controllers/blog/chronological.py",
+		"/home/graf/projects/web/blog/blogofile/_site/top.js",
+		"/home/graf/projects/web/blog/blogofile/_templates/chronological.mako",
+		"/home/graf/projects/web/blog/specials/plusminus/plusminus.php",
+		"/home/graf/projects/web/blog/blogofile/_controllers/blog/threads.json",
+		"/home/graf/projects/web/blog/blogofile/threads.json",
+		"/home/graf/projects/web/blog/blogofile/_top.json",
+		"/home/graf/projects/web/blog/specials/plusminus/voting.js",
+		"/home/graf/projects/web/blog/specials/plusminus/example.html",
+		"/home/graf/incoming/mattn-jquery-github-badge-d0a20be/README",
+		"/home/graf/projects/web/blog/specials/plusminus/create.sql",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_js/11-voting.js",
+		"/home/graf/projects/web/blog/specials/example.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates/head_ext.mako",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_pages/0324-wtf_кто_где_назачем.html",
+		"/home/graf/ftp",
+		"/home/graf/projects/web/blog/specials/index.html",
+		"/home/graf/projects/web/blog/specials/template.html",
+		"/home/graf/projects/web/blog/blogofile/_posts/1149-voting.md",
+		"/home/graf/projects/web/blog/blogofile/_posts/test.md",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/test.md",
+		"/media/SANSA CLIP",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_filters/syntax_highlight.py",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/0358-wordpress_плагин_для_голосования_1.1.1.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/0844-новый_doom.html",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_config.py",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_controllers/blog/thexnews_legacy.py",
+		"/home/graf/yandex-buttons/column.css",
+		"/home/graf/projects/web/blog/blogofile/_drafts/почему-кнопки-от-яндекса-самые-классные-кнопки.markdown",
+		"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts/1145-Каким должен быть современный блог.md",
+		"/media/archive/shared/Wuala/documents/and_settings/dot_config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/graf/projects/python/one_time/import_votes.py",
+		"/media/archive/shared/_Dropbox/backup/thexnews.com_02.10/www/wp-content/plugins/graf_ultimate_top.php"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/graf/projects/web/javadayriga",
+			"/home/graf/projects/web/javadayriga/_templates",
+			"/media/archive/shared/Wuala/projects/web/blog/blogofile/_templates",
+			"/media/archive/shared/Wuala/projects/web/blog/blogofile",
+			"/media/archive/shared/Wuala/projects/web/blog/blogofile/_posts",
+			"/media/archive/shared/Wuala/projects/web/blog/blogofile",
+			"/home/graf/projects/web/blog/blogofile",
+			"/home/graf/projects/web/blog/blogofile/_templates",
+			"/home/graf/projects/web/blog/blogofile/_posts",
+			"/home/graf/projects/web/blog/blogofile/_templates",
+			"/home/graf/projects/web/blog/blogofile/",
+			"/home/graf/projects/web/blog/blogofile/_templates,/home/graf/projects/web/blog/blogofile/_controllers/blog"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"png",
+			"loadi",
+			"open",
+			"draw_link",
+			"draw_url",
+			"')\n",
+			"draw_url",
+			"11:30",
+			"cent",
+			"^",
+			"icon ",
+			"column_mode",
+			"additional_title",
+			"slim",
+			"section_title",
+			"play",
+			" li",
+			"li",
+			"50%",
+			"width",
+			"six",
+			"filena",
+			"scrip",
+			".menu",
+			" li",
+			"li",
+			"field",
+			"div",
+			"lig",
+			"speak",
+			"title",
+			"\">\n",
+			".tim",
+			"hspace",
+			" schedule",
+			"Organized by",
+			"theme",
+			"else",
+			"endfor",
+			"'name'",
+			"endfor",
+			"play",
+			"subtitle",
+			"url",
+			"section",
+			"glow",
+			";\n",
+			"border",
+			"toc",
+			"quake 2",
+			"quake2",
+			")\n",
+			"[img",
+			"Универса",
+			"destoryed",
+			"destro",
+			"zadra",
+			"import",
+			"document.write",
+			"comment_link",
+			"')",
+			"url",
+			"utf",
+			"smart_str",
+			".mako",
+			")",
+			"(",
+			"dirtyd",
+			"http://metrika.yandex.ru/stat/?id=11742112",
+			"$$code",
+			"[code",
+			"__apply_filters",
+			"__parse_post_excerpting",
+			"__excerpt",
+			"&lt;",
+			"[code",
+			"$$",
+			"high",
+			"code",
+			"download",
+			"permalink",
+			"<!--more",
+			"$.getScript(\"http://site.yandex.net/load/form/1/form.js\");",
+			"rece",
+			"direction",
+			"counter_id",
+			"count_id",
+			".markdown",
+			"статью",
+			"vote_id",
+			"inlin",
+			"visibility",
+			"g_votesbg",
+			"g_votebg",
+			"g_vote2",
+			"g_vote",
+			"colo",
+			"create_images",
+			" eof",
+			"eof",
+			"baseUrl",
+			"%;",
+			"paginator1",
+			"\n	",
+			"build.sh",
+			"build",
+			"url",
+			"3",
+			"Catag",
+			"cata",
+			"tag",
+			"url",
+			"blog.old_url",
+			"href",
+			"width=\"150\"",
+			"alt=\".*\"",
+			"width=\"150\" height=\"150\"",
+			"disqus",
+			"dis",
+			"jq",
+			"cat",
+			"pygments_monokai",
+			"style",
+			"pyg",
+			"20",
+			"permalink",
+			"permalinki",
+			"permalink"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"column_mode_only",
+			"column_mode",
+			"'flag'",
+			"glowing",
+			"dw",
+			"');",
+			"]",
+			"[",
+			"http://thexnews.com/stats",
+			"amount",
+			"actor",
+			"target",
+			"vote_result",
+			"vote_bg",
+			"vote_down",
+			"vote_up",
+			"width=\"300\"",
+			"",
+			"pygments_murphy",
+			"post",
+			"prev_post",
+			"",
+			"\",\"",
+			"'",
+			"content=content.replace(",
+			")",
+			"\\\"",
+			"${comment['id']}",
+			"comment['id']",
+			"${comment.id}",
+			"</p><p>",
+			"",
+			"${url}",
+			"",
+			"z",
+			"l",
+			"k",
+			"e",
+			"s",
+			"i",
+			"a",
+			"\\n",
+			"<br/>",
+			"<a href='goo.gl/UxiM9'>Tallink Hotel Riga</a>, Elizabetes 24, Riga",
+			"<a href=\"	\n<a href='goo.gl/UxiM9'>Tallink Hotel Riga</a>, Elizabetes 24, Riga",
+			"<a href=\"	\ngoo.gl/UxiM9\">Tallink Hotel Riga</a>, Elizabetes 24, Riga",
+			"\"langs\":\"English/Russian\"",
+			"\"langs\":\"English\\Russian\"",
+			"",
+			"}\\n {",
+			"}]},",
+			"\"author\":\"",
+			"\",\"name\":\"",
+			"\"author\":",
+			"}]}]\\n{\"date\":\"",
+			"{\"date\":\"",
+			"},\\n{",
+			"",
+			"\\n",
+			"/",
+			"<td>",
+			"<tr class='tblHeader2'><td>",
+			"<td>",
+			"<td><td>",
+			"<td  class='s2'><td  class='s2'>",
+			"",
+			"http://dmi3.net/jug/sponsors",
+			"sponsors",
+			"",
+			"vk.com",
+			"\\\"",
+			"$graf_url",
+			"scrobbler.log",
+			"filtered.log",
+			"",
+			"artifactId",
+			"groupId",
+			"_",
+			"Wuala",
+			"",
+			"UbuntoServer",
+			"'",
+			"",
+			"'",
+			"btsocket",
+			" - ",
+			","
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 204.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true
+}

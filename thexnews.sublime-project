@@ -1,0 +1,18 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"$project_path/blogofile/site_init/deploy_localhost.sh"
+			],
+			"name": "Build Project"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "blogofile/site_init/"
+		}
+	]
+}

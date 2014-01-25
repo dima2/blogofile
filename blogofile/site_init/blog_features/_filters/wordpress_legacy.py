@@ -144,7 +144,7 @@ def create_toc(content):
       
     
     for header in headers:      
-      title=re.sub(r'<.*?>','',header[2])
+      title=re.sub(r'[<&].*?[>;]','',header[2])
       lvl=header[1]
       link=''.join(e for e in title if (e.isalnum() or e==" ")).lower().replace(" ","-")
       linkedHeader="<h%s id='%s'>%s</h%s>" % (lvl,link,header[2],lvl)      
