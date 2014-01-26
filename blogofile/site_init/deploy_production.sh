@@ -36,3 +36,12 @@ curl https://www.cloudflare.com/api_json.html \
   -d 'email=dima@thexnews.com' \
   -d 'z=thexnews.com' \
   -d 'v=1'
+
+if $deploy_content_as_branch ; then
+  rm -R $content_branch_dir*
+  cp -R blog_features/_posts "$content_branch_dir"  
+  cp -R blog_features/_pages "$content_branch_dir"
+  cd "$content_branch_dir"
+  git add *
+  git commit -a -m 'content update' && git push origin content
+fi

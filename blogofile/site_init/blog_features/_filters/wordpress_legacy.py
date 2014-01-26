@@ -168,7 +168,6 @@ def run(content):
     content=full_paths(content)
     content=special_cases(content)
 
-
     content=content.replace(":???:", '<img class="wp-smiley" alt="WTF?" src="/images/icon_confused.png"/>')
     content=content.replace(":evil:", '<img class="wp-smiley" alt=">:)" src="/images/icon_evil.png"/>')
 
