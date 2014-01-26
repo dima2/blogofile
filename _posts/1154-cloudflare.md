@@ -64,7 +64,7 @@ curl https://www.cloudflare.com/api_json.html \
 [opt]: http://thexnews.com/три-способа-ускорить-загрузку-вашего-сайта.html "Оптимизация сайта по скорости"
 [сделали кнопки социальных сетей асинсхронными]: http://thexnews.com/кнопки-соцсетей-от-Яндекса.html "Быстрые кнопки социальных сетей"
 [комманду]: https://www.cloudflare.com/docs/client-api.html#s4.4 "Cloudflare очистить кэщ"
-[синхронизации новой версии сайта по ftp]: https://github.com/dmi3/thexnews.com/blob/master/deploy_production.sh
+[синхронизации новой версии сайта по ftp]: https://github.com/dmi3/thexnews.com/blob/master/blogofile/site_init/deploy_production.sh
 [100 террабайт]: http://phoboslab.org/log/2013/02/how-much-traffic-is-too-much-traffic-for-cloudflare
 [Cloudfront]: http://aws.amazon.com/cloudfront/
 [Content Delivery Network]: http://ru.wikipedia.org/wiki/Content_Delivery_Network

@@ -58,7 +58,7 @@ trimage -f _images
 
 [y]: http://thexnews.com/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8-%D1%81%D0%BE%D1%86%D1%81%D0%B5%D1%82%D0%B5%D0%B9-%D0%BE%D1%82-%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0.html
 [p]: http://tools.pingdom.com/fpt/ "проверить скорость загрузки сайта"
-[b]: https://github.com/dmi3/thexnews.com/blob/master/build.sh
+[b]: https://github.com/dmi3/thexnews.com/blob/master/blogofile/site_init/build.sh
 [u]: https://github.com/mishoo/UglifyJS/ "уменьшить офмфыскшзе оптимизация ubuntu "
 [t]: http://trimage.org/ "сжатие png ubuntu"
 [c]: http://mabblog.com/cssoptimizer/ "ubuntu уменьшить css оптимизация"
