@@ -17,7 +17,7 @@ http://thexnews.com/статический-блог-blogofile.html
     sudo easy_install Blogofile==0.7.1
 
     #clone thexnews.com
-    git clone git://github.com/dima2/thexnews.com.git
+    git clone https://github.com/dmi3/thexnews.com.git
 
     #build blog and run blogofile server
     cd thexnews.com/
