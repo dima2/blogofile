@@ -1,0 +1,62 @@
+---
+categories: Железо
+date: 2008/08/01 00:37:14
+description: ''
+permalink: http://thexnews.com/клавиатура-от-apple-и-ubuntu-804.html
+tags: apple, keyboard, Ubuntu 7.10, Ubuntu 9.04, Ubuntu, ubuntu 8.04
+title: Клавиатура от Apple и Ubuntu 8.04 и 9.04
+---
+<p><div class="entry-body">
+<div>
+<div class="item-body">
+<div>
+<p style="text-align: center;"><img alt="Apple Keyboard" class="aligncenter" height="148" src="../wp-content/uploads/apple_keyboard1.gif" title="apple_keyboard1" width="400" /></p></p>
+
+<p>С тех пор как умерла моя Benq A800, я не мог найти нормальную клавиатуру, мучаясь на запасной китайке за $2. Почему-то клавиатуры Benq у нас теперь не продаются, а остальные меня не устраивали. И вот сегодня, я случайно зашел в Apple Store (чисто прохладиться — кондиционеры у них просто сказка <img alt=":)" src="../wp-includes/images/smilies/icon_smile.gif" />). Попечатал на iMac'е и понял, что нашел идеальную клавиатуру (Mac может быть тоже для кого-то идеален но мне на него жалко денег <img alt=":(" src="../wp-includes/images/smilies/icon_sad.gif" />). Так вот, мои впечатления от <a href="http://www.apple.com/keyboard/" target="_blank" title="Apple Ubuntu Keyboard">Ultra Thin Usb клавиатуры</a>:</p>
+
+<p>Алюминиевое покрытие приятно холодит пальцы <img alt=":)" src="../wp-includes/images/smilies/icon_smile.gif" />.</p>
+
+<p>Оптически она выглядит очень "легко" оставляя свободу обзора на столе, однако физически тяжела и поэтому очень устойчива.</p>
+
+<p>Все клавиши находиться именно там, где надо. Сразу смог печать вслепую (обычно на новых клавиатурах мне требуется время для привыкания).</p>
+
+<p>Ход клавиш просто идеален — особенно хорошо ходит пробел, бессмысленно описывать — это надо почувствовать.</p>
+
+<p>Нет лишних кнопок (вроде PowerOff'a), вокруг стрелок множество свободного места, вертикальной-продолговатый Enter — все те мелочи которые делают мой набор удобным.</p>
+
+<p>Кстати, не смотря на кажущуюся мелкость, клавиши размером больше, чем на обычных клавиатурах.</p>
+
+<p>Во встроенные USB можно воткнуть мышку — одним проводом меньше.</p>
+
+<p>Ну и,естественно, дизайн — тут уж все ясно.</p>
+
+<p>Не клавиатура а мечта, и я ее немедленно купил. Хотя юзаю Ubuntu, я не думал что возникнут проблемы с совместимостью — клавиатура она и в африке клавиатура. Тем более в каком-то из <a href="http://radio-t.com/" target="_blank" title="Apple">Радио-T</a> шутили, что Apple это известный производитель клавиатур, которые теперь стало модно ставить на PC. Но не тут-то было…</p>
+
+<p>В BIOSе, Grub'e, WinXP, консоли и даже Login Screen'e Ubuntu она работала полностью. Но не в самой Ubuntu 8.04 (Ни в Gnome), ни в KDE4. Что бы добиться корректной работы мне пришлось потратить почти час. А поскольку эту клавиатуру я рекомендую абсолютно всем, <!--more описываю как это у меня получилось--></p>
+
+<p>После подключения по USB, правильно работал только BackSpace — остальные кнопки выдавали бред. Как я понял, это из за того, что на Mac'ах отсутствует понятие отключенного NumLock'а. Поэтому я зашел в BIOS (в котором клавиатура прекрасно работала) и поставил <em>"Num Lock Status"</em> на <em>"Off"</em> (не включать его при старте) и <em>"USB Keyboard Support"</em> на <em>"On"</em>.</p>
+
+<p>После этого почти все стало работать нормально, только при нажатии кнопки "Clear" (На Маках она находится на месте НамЛока и очищает поле ввода), клавиатура становилась невменяемой. Да и F1-F12 работали только при зажатом Fn, при обычном нажатии на них висело управление всякими мультимедийными штуками (На Mac'ах так принято). Но меня это не устраивало и я нашел <a href="https://help.ubuntu.com/community/AppleKeyboard" target="_blank" title="Ubuntu клавиатура Apple">решение</a>:
+<div>
+<div>Для <strong>Ubuntu 8.04</strong>:[code]sudo gedit /etc/modprobe.d/options[/code] добавить строку:</div>
+</div>
+<div>
+<div>[code]options hid pb_fnmode=0[/code]<strong></strong></div>
+<div style="margin-top: 20px;">
+<strong>UPD:</strong> Для <strong>Ubuntu 9.04</strong>:[code]sudo gedit /etc/modprobe.d/hid_apple.conf[/code] добавить строку:</div>
+<div>
+<div>
+<div style="margin-top: 20px;">[code]options hid_apple fnmode=0[/code] После чего выполнить команду: [code] sudo update-initramfs -u[/code] и перезагрузиться.</p>
+
+<p>Теперь осталось пофиксить мелочи:</div>
+</div>
+</div>
+</div>
+Зайти в "<em>System-&gt;Preferences-&gt;Keyboard-&gt;Layouts</em>" (<span style="color: #808080;"><em>Для KDE 4.1: "System Settings-&gt;General-&gt;Regional…-&gt;Keyboard-&gt;Avanched"</em></span>) и поставить "<em>Keyboard Model</em>" на "<em>Apple</em>", в "<em>Layouts Options-&gt;Miscellaneous compatibility options</em>" проставить птичек на две строки содержащие слово "<em>Mac</em>". И наконец поменять местами Alt и Cmd — "<em>Alt/Win key Behavior</em>" поставить галочку на "<em>Left Alt is swapped..</em>."</p>
+
+<p>На всякий случай — <a href="http://ubuntuforums.org/showthread.php?t=224673" target="_blank" title="Apple Ubuntu Bluetooth Keyboard">гайд для беспроводной клавиатуры</a> (англ.).</p>
+
+<p>Теперь моя клавиатура работает. С USB портами пр краям странное дело — флешки и BT работают, а вот кардридер уже нет (видимо ток там ограничен <img alt=":)" src="../wp-includes/images/smilies/icon_smile.gif" />). Но это мелочи. Клавиши F13-F19 настраиваются в ""<em>System-&gt;Preferences-&gt;Keyboard Shortcuts</em>". И это, кажеться, лучшая клавиатура из всех, коих касались мои кривые руки. <strong>Настоятельно рекомендую</strong>. Она стоит тех 50 баков, которые за нее просят.</div>
+</div>
+</div>
+</div></p>

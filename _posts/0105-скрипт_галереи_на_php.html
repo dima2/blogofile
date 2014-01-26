@@ -1,0 +1,65 @@
+---
+categories: Webmaster
+date: 2008/01/14 22:55:01
+description: Простой и функциональный как дверь скрипт.
+permalink: http://thexnews.com/скрипт-галереи-на-php.html
+tags: Интернет, создание сайтов, бесплатно, галерея, галлерея, скачать, php скрипт,
+  Best
+title: Скрипт галереи на PHP
+---
+<p>Мне часто бывает нужен простой как дверь скрипт галереи на PHP. Что-бы можно было тупо скинуть в папку с картинками, и он работал. Без MySQL. Без сложной закачки картинок через админку. Большая редкость такой скрипт. Либо всякие монстры, которые по размеру и количеству файлов легко переплюнут средний сайт. И тоннами ненужных функций. Или с заморочками всякими нехристианскими.</p>
+
+<p>Нашел скрипт от <em>Baglan Dosmagambetov</em>. Он просто создавал и выводил thumbnail. Все. Я его немножко подправил, что-бы можно без проблем сделать include() в любую страницу сайта, и чтобы показывал галерею постранично. И еще настройки кой какие добавил. Ура. Теперь у меня есть очень простой скрипт галереи на PHP.</p>
+
+<p>Скрипт не подойдет для сайтов с большой посещаемостью. Но для среднего проекта - в самый раз.<!--more--></p>
+
+<p><strong>Инструкция:</strong></p>
+
+<p>Закачиваете в папку где картинки лежат. Все. При желании, сделайте include() в любую вышестоящую страницу. Чтобы уменьшить нагрузку на сервер, можно поставить права 777 на эту папку.</p>
+
+<p><strong>Настройки: </strong></p>
+
+<p>Можно изменить кое-какие сеттинги в gal.php</p>
+
+<p>[code]
+//SETTINGS SETTINGS SETTINGS</p>
+
+<p>define('WIDTH',200);               &amp;amp;amp;lt;strong&amp;amp;amp;gt; // ширина thumbmail&amp;amp;amp;lt;/strong&amp;amp;amp;gt;
+define('HEIGHT',200);               &amp;amp;amp;lt;strong&amp;amp;amp;gt; // длинна thumbnail&amp;amp;amp;lt;/strong&amp;amp;amp;gt;
+define('EXT','.tmb');                &amp;amp;amp;lt;strong&amp;amp;amp;gt;// разрешение thumbnail&amp;amp;amp;lt;/strong&amp;amp;amp;gt;
+define('IMAGES_PER_PAGE',10);            &amp;amp;amp;lt;strong&amp;amp;amp;gt;// количество thumbnail на странице&amp;amp;amp;lt;/strong&amp;amp;amp;gt;
+define('IMAGES_PER_ROW',2);           &amp;amp;amp;lt;strong&amp;amp;amp;gt; // количество thumbnail в одном ряду&amp;amp;amp;lt;/strong&amp;amp;amp;gt;</p>
+
+<p>&amp;amp;amp;lt;strong&amp;amp;amp;gt;//цвет фона в RGB thumbnail&amp;amp;amp;lt;/strong&amp;amp;amp;gt;
+define('R',255);
+define('G',255);
+define('B',255);</p>
+
+<p>//SETTINGS SETTINGS SETTINGS
+[/code]</p>
+
+<p>Желательно подключить примерно такой CSS:</p>
+
+<p>[code]
+.gallery_content {text-align:center;}
+.gallery_content a img {border:0px; margin:3px;}
+.gallery_navigation {text-align:center;}
+.gallery_navigation a {margin-left:5px;}
+[/code]</p>
+
+<p><code>[download#16#image]</code></p>
+
+<p><span style="color: #ff0000;"><strong>(!) Update: </strong></span><span style="color: #000000;">Добрый человек</span> <a href="http://photo-vo.com/">Vo</a>, предлагает <a href="http://thexnews.com/%d1%81%d0%ba%d1%80%d0%b8%d0%bf%d1%82-%d0%b3%d0%b0%d0%bb%d0%b5%d1%80%d0%b5%d0%b8-%d0%bd%d0%b0-php.html#comment-12169">исправленную версию</a>, которая работает с include.</p>
+
+<p><strong>Update:</strong></p>
+
+<p>Что-бы работало с Wordpress и прочими mod_rewrite, замените строку</p>
+
+<p>[code]parse_str($QUERY_STRING);[/code]</p>
+
+<p>на:</p>
+
+<p>[code]$PHP_SELF=$_SERVER['REDIRECT_URL'];
+parse_str($_SERVER['REDIRECT_QUERY_STRING']);[/code]</p>
+
+<p>Кстати, <a href="http://thexnews.com/flash%d0%ba%d0%b8-%d0%b4%d0%bb%d1%8f-%d1%81%d0%b0%d0%b9%d1%82%d0%b0.html" title="Галерея">галерея на flash</a>.</p>

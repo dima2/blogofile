@@ -1,0 +1,44 @@
+---
+categories: Webmaster
+date: 2008/06/19 19:02:31
+description: Мой вариант решения этой знаменитой проблемы.
+permalink: http://thexnews.com/закругленные-углы-css.html
+tags: code, велосипед, round corners, Best, скачать, закругленные углы, css
+title: Закругленные углы CSS
+---
+<p><img align="left" alt="Закругленные края" src="/uploads/round.png" title="Закругленные края" />Решил я в очередной раз изобрести велосипед, и предложить свое решение знаменитой вебмастерской проблемы закругленных краев. Существующие варианты, либо содержат очень много строчек CSS, либо имееют всякие ограничения - например на цвет.</p>
+
+<p>Мой вариант использует прозрачный PNG (или Gif для IE6). Благодаря этому, можно скруглять что угодно - блоки разных цветов, картинки, бекграунды. Требуется только один PNG, для всех четырех углов и блоков разного цвета, что ускоряет время загрузки. Вообщем смотрите <a href="http://thexnews.com/demo/rounded/round.html" title="загругленные углы">пример</a>.</p>
+
+<p>[postovoy] Пеар акция "<a href="http://195531.com/allo-my-ishhem-talanty/">Алло, мы ищем таланты!</a>" от блога <a href="http://195531.com/" target="_blank">Магия Чисел</a>. Получите свой краткий обзор и ссылку :)[/postovoy]</p>
+
+<p><!--more Скачать и установить--><strong> Установка:</strong>
+<ol>
+	<li>Прицепите как-нибудь к нужной странице  <em>round.css</em> .</li>
+	<li>Пропишите в <em>round.css</em> пути к картинкам: <em>roundwhite.gif</em> и <em>roundwhite.gif</em> .</li>
+	<li>Перекрасьте их в фоновый цвет вашей страницы, если он не белый.</li>
+	<li>Чтобы скруглить любой DIV пропишите в его начале:
+<pre>&lt;div class="rct"&gt;&lt;div class="rct2"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="rndc"&gt;</pre>
+</li>
+	<li>И в конце DIV'а:
+<pre>&lt;/div&gt;&lt;div class="rcb"&gt;&lt;div class="rcb2"&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+</li>
+	<li>Если возникнут вопросы, смотрите scource <a href="http://thexnews.com/demo/rounded/round.html" title="загругленные углы">примера</a>.</li>
+</ol>
+Еще пример:
+<pre>[code lang='html']</p>
+
+<p>...</p>
+
+<p><div style="background: #ccc; width: 250px;">
+//Div с любыми параметрами - цвет, размер...</p>
+
+<p><div class="rct"><div class="rct2"></div></div><div class="rndc"> //Скруглялка 1</p>
+
+<p>Содержание</p>
+
+<p></div><div class="rcb"><div class="rcb2"></div></div> //Скруглялка 2</p>
+
+<p></div>
+[/code]</pre>
+[download#18#image]</p>

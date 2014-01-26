@@ -1,0 +1,65 @@
+---
+categories: Wordpress
+date: 2008/08/06 15:43:57
+description: Узнайте как оценивают ваши посты читатели блога!
+permalink: http://thexnews.com/wordpress-плагин-для-голосования-2.html
+tags: Интернет, skin скин, Wordpress, Best, скачать, Vote It Up, плагины plugin, блоги
+title: Wordpress плагин для голосования 2
+---
+<p>
+<div id="vote3" style="float:left" class="g_votebg" onmouseout="document.getElementById('vote3').style.backgroundPosition='0px 0px'">
+  <span class="g_vote" onmouseover="document.getElementById('vote3').style.backgroundPosition='0px -63px'"></span>
+  <span class="g_vote2" onmouseover="document.getElementById('vote3').style.backgroundPosition='0px -126px'"></span>
+</div>
+ Самая полезная штука, которую я сделал для Wordpress - <a title="Wordpress плагин для голосования" href="http://thexnews.com/wordpress-плагин-для-голосования.html">мод</a> плагина голосования <a title="плагин голосования" href="http://www.tevine.com/projects/voteitup/">Vote It Up</a>. Я изменил его невзрачный по умолчанию внешний вид, на более яркий и заметный. И узнал о своих посетителях много нового. Например, им абсолютно не нравится посты про KDE, а <a href="http://thexnews.com/%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D1%8B-%D0%B4%D0%BB%D1%8F-firefox-3.html">плагины для Firefox</a> и <a href="http://thexnews.com/%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B0%D0%B9%D0%BA%D0%B8.html">веселые байки</a> бьют все рекорды.</p>
+
+<p>Со времен первой статьи, вышла новая версия Vote It Up 1.0.7. Теперь что-бы изменить внешний вид голосовалки, не надо переписывать оригинальный код - сделана поддержка скинов. Скин для этого замечательного плагина я и хочу представить вам сейчас. (Плюс традиционные фиксы русской кодировки). Если вы уже знаете, почему он замечательный - сразу жмите <a title="голосование Wordpress за пост" href="http://thexnews.com/wordpress-%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-2.html">сюда</a>, потому что я немного расскажу о его преимуществах.</p>
+
+<p>Любому блогеру важно знать, что думают читатели о его творчестве. Быть в курсе, какие статьи посетителям нравятся, что-бы писать еще на эту тему. Вовремя удалять или исправлять, неудачные посты. Комментирует посты, как правило, малая часть читателей, так как остальным нечего сказать, или же просто лень. Что-бы знать из мнение нужна простая система голосования.</p>
+
+<p>Самыми распространенными являются вариации "пяти звездочек". По опыту могу сказать что посетители используют их редко. Во-первых их размещают где-нибудь в незаментном месте, во-вторых к звездочкам уже все привыкли и не обращают внимания, а в третьих посетителю придеться задумываться - какую же оценку поставить. Другое дело инстинктивные "+1 / -1" - "понравилось / не понравилось". Но и такую систему нередко делают незаметной, как например дефолтная голосовалка от Vote It Up.</p>
+
+<p>Поэтому я и сделал этот яркий, простой и заметный скин. Поверьте, это работает - даже при небольшой посещаемости посыпалось множество голосов. В разы больше, чем при других голосовалках. Ищите кнопку "Top Voted" где то справа от этого текста :).</p>
+
+<p>Хотите узнать что думают о <em>вашем</em> блоге? <!--more Устанавливайте плагин с моим скином ;)--></p>
+
+<p><img class="size-full wp-image-799 alignnone" title="vote1" src="/uploads/vote1.jpeg" alt="vote1" width="300" height="63" /></p>
+
+<p>Список самых "голосуемых" (Most Voted) постов:</p>
+
+<p><a href="/uploads/mostvoted.png"><img class="alignnone size-thumbnail wp-image-221" title="mostvoted" src="/uploads/mostvoted-150x150.png" alt="" width="150" height="150" /></a></p>
+
+<p><strong>Установка:</strong></p>
+
+<p>Для начала <a title="Wordpress голосование" href="http://wordpress.org/extend/plugins/vote-it-up/installation/" target="_self">скачайте и установите</a> Vote It Up версии 1.0.7
+<ol>
+	<li>Раззипуйте и залейте содержимое архива "vote-it-up.1.0.7.zip" в папку "/wp-content/plugins/" и активируйте "Vote It Up" в одминке-&gt;Plugins.</li>
+	<li>Зайдите в папку с вашей текущей темой ("wp-content/themes/<em>название_темы</em>"). Откройте файл, где будет выводиться голосовалка ("index.php" - для главной, "single.php" - для постов, "page.php" - для страниц).</li>
+	<li>Где-то после "&lt;?php the_content...", впишите строчку:[code lang="php"]< ?php DisplayVotes(get_the_ID()); ?>;[/code] Закройте и сохраните файл.</li>
+	<li>Должна появиться такая вот невзрачная голосовалка:
+<a href="/uploads/golosovalka.png"><img class="alignnone size-thumbnail wp-image-220" title="golosovalka" src="/uploads/golosovalka.png" alt="Голосование за пост wordpress" width="110" height="110" /></a><a href="/uploads/golosovalka.png">
+</a></li>
+	<li>Что-бы выводить список самых популярных тем, в Design-&gt;Widgets добавьте виджет "Most Voted Posts" или в коде темы строчку: [code lang="php"]< ?php MostVotedAllTime(); ?>[/code] Кстати, вместо кириллицы, будет абракадабра:
+<a href="/uploads/vote-rus.png"><img class="alignnone size-thumbnail wp-image-219" title="vote-rus" src="/uploads/vote-rus-150x76.png" alt="Vote It Up проблема с кириллицей" width="150" height="76" /></a></li>
+</ol>
+Все работает, но криво и не красиво? Пора устанавливать мой скин ;)!
+<ul>
+	<li>Скачайте, распакуйте архив <code>[download#20#nohits]</code> и залейте папку graf_thumbs в "/wp-content/plugins/vote-it-up/skins"</li>
+</ul>
+<strong>Настройка</strong></p>
+
+<p>Настройки плагина находяться в Адмнике-&gt;Settings-&gt;Vote It Up</p>
+
+<p>В <strong>External Skins</strong> выбирайте скин  "Graf thumbs".</p>
+
+<p><strong>Allow guests to vote</strong> - можно ли голосовать гостям. <strong><span>(обязательно ставьте "Yes"!)</span></strong></p>
+
+<p><strong>Use text instead of images for vote links - </strong>на<strong> </strong>мой скин это не влияет.</p>
+
+<p>Что-бы не плодить собственной админки, скин использует некоторые настройки немного не по назначению:</p>
+
+<p><strong>Text displayed in the voting link - </strong>Текст перед рейтингом (количеством голосов).</p>
+
+<p><strong>Allow votes against posts - </strong>показывать или не показывать рейтинг поста до того как пользователь проголосовал.
+<div><a title="голосование wordpress" href="http://thexnews.com/vote-it-up"><img src="/plugins/wp-downloadMonitor/img/download.gif" alt="Скачать" /></a></div>
+<strong>PS:</strong> Удачного вам блоггинга ;)! Будут Вопросы - спрашивайте. Через какое-то время напишу, как смотреть популярные/непопулярные посты и новые голоса в админке.</p>

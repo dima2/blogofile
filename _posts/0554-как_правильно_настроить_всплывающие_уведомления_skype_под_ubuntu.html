@@ -1,0 +1,62 @@
+---
+categories: Софт
+date: 2010/01/23 15:34:56
+description: ''
+permalink: http://thexnews.com/как-правильно-настроить-всплывающие.html
+tags: python, Skype, скачать, велосипед, Ubuntu, идиотизм, Best
+title: Как правильно настроить всплывающие уведомления Skype под Ubuntu
+---
+<p><p style="text-align: center;"><img alt="skype ubuntu notify osd" class="size-full wp-image-567  aligncenter" height="203" src="/uploads/notify.gif" title="skype ubuntu notify osd" width="366" /></p></p>
+
+<p>Наконец-то <a href="http://www.skype.com/intl/ru/download/skype/linux/" title="skype ubuntu">новый Скайп</a> поддерживает оформление Qt. Потихоньку программа становится более-менее юзабельной, но косяков еще много. Например, когда вам приходят сообщения в Linux'овый Скайп, они появляются где-то сбоку-снизу, что выглядит ужасно. Особенно в сравнении с великолепной Ubunt'овской системой уведомлений <a href="https://wiki.ubuntu.com/NotifyOSD#Merging notifications" title="Skype всплывающие сообщения Ubuntu">Notify-OSD</a>. Поскольку у меня с помощью Notify-OSD все в принципе уведомления появляются в красивых прозрачных окошках справа-сверху, неродной Skype особенно режет глаз.</p>
+
+<p>Если поискать в интернете, то можно найти совет прописать в настройках что-то вроде <code>notify-send -i skype '%sname' '%smessage'</code>, но все равно <strong>выходит криво</strong>, потому что:
+<ul>
+	<li>Если вам придут <em>несколько сообщений подряд</em>, они будут выскакивать по очереди с перерывом 10 секунд, <em>вместо того</em> что-бы <em>прикрепляться </em>к предыдущему от того же собеседника (см. скриншот). Долго. И можно пропустить что-то важное.</li>
+	<li>Сообщения будут выскакивать даже если у вас <em>открыто окно чата</em>, что просто бессмысленно.</li>
+</ul>
+Наконец-то у меня дошли руки выложить собственное решение. Заодно покажу как пишутся простенькие сервера на Python :).</p>
+
+<p><!--more Всплывающие сообщения Skype с помощью Notify-osd--></p>
+
+<h3>Установка</h3>
+<ol>
+  <li>Установите программу для управления окнами wmctrl и необходимые библиотеки:
+[code lang='bash']sudo apt-get install wmctrl libnotify[/code]</li>
+	<li>Скачайте <a href='https://raw.github.com/dmi3/bin/master/notify-append'>скрипт notify-append</a> и <a href='https://raw.github.com/dmi3/bin/master/skypenotify'>скрипт skypenotify</a> в папку <code>~/bin/</code>:</li>
+  [code lang='bash']wget https://raw.github.com/dmi3/bin/master/notify-append -P ~/bin
+  wget https://raw.github.com/dmi3/bin/master/skypenotify -P ~/bin[/code]
+	<li>Сделайте скрипты исполняемыми [code lang='bash']chmod +x ~/bin/notify-append && chmod +x ~/bin/skypenotify[/code]</li>
+	<li>Skype->Options->Notifications</li>
+	<li>Нажмите кнопку "<em>Advanched</em>" справа.</li>
+	<li>Для событий "<em>Chat Message Received</em>" и "<em>First Chat Message Received</em>" в "Execute the following script" введите:
+[code lang='bash']skypenotify "%sname" "%smessage"[/code]
+(если скрипты лежат в папке <code>~/bin/</code> полный путь прописывать необязательно)</li>
+	<li>Для них-же уберите птичку с "<em>Display pop-up</em>"</li>
+	<li>Сверните Скайп и ждите пока вам кто-нибудь напишет, для проверки. Ну или просто нажмите "<em>Test Event</em>"; (так неинтересно :).</li>
+</ol>
+</p>
+
+<a class='download-button' href='https://raw.github.com/dmi3/bin/master/notify-append'>Скрипт notify-append</a>
+<a class='download-button' href='https://raw.github.com/dmi3/bin/master/skypenotify'>Скрипт skypenotify</a>
+
+
+<p><strong>PS:</strong> Ненавижу Skype. Но приходится им пользоваться, потому что многие думают иначе :(.</p>
+
+<p><strong>PPS:</strong> Также вы можете использовать notify-append для любой другой программы, где требуется приклеивать сообщения к друг другу используя комманду:
+[code lang='bash']notify-append 'Заголовок программы' 'Сообщение' 'Иконка (не обязательно)'[/code]
+Скрипт <code>skypenotify</code> используется чтобы показывать уведомление только если окно с собеседником не в фокусе.
+
+<p><h3>UPD: Старое решение</h3></p>
+
+<p>По ссылке выше - новое решение, написанное полностью на dbus. Раньше тут все было харкорнее:скрипта, один на Python - сервер который подключается к Notify-OSD; 2-ой bash, который  посылает серверу мессаги из скайпа :). Его вы можете скачать здесь - [download#29#nohits]. Теперь немного о том как это работало раньше:</p>
+
+<p>Сообщения будут прикрепляться (merge) друг к другу, только если вызывать их из одной программы. Команда notify-send работать <em>не будет</em>, так как ее новая копия запускается при каждом вызове.</p>
+
+<p>Поэтому, запускается небольшой сервер на Python и начинает слушать 8091 порт.</p>
+
+<p>Когда приходит мессадж, Skype через Bash скрипт запрашивает wget'ом адрес http://127.0.0.1:8091/<em>сообщение</em></p>
+
+<p>Python сервер это сообщение парсит, и выводит через pynotify.</p>
+
+<p>Советую посмотреть исходники "сервера", может быть полезно, например для создания web-интерфейсов к Python программам.</p>

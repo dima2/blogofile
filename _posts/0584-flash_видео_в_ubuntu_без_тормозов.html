@@ -1,0 +1,28 @@
+---
+categories: Интернет
+date: 2009/12/30 15:50:14
+description: ''
+permalink: http://thexnews.com/flash-видео-в-ubuntu-без-тормозов.html
+tags: удобство, workaround, Linux, python, youtube.com, Flash, тормоза лаги и глюки,
+  Ubuntu, turbofilm.ru, идиотизм
+title: Flash видео в Ubuntu без тормозов
+---
+<p><a href="/uploads/ubuntu-flash-video.png"><img alt="ubuntu flash тормоза" class="alignleft size-thumbnail wp-image-589" height="150" src="/uploads/ubuntu-flash-video-150x150.png" title="ubuntu flash тормоза" width="150" /></a>Проблема за которую часто ругают десктопный Linux - тормоза при просмотре флеш-видео. Даже на мощных компьютерах иногда  тормозит <a href="http://www.youtube.com/videos?s=mphd" title="youtube hd тормозить ubuntu">Youtube в HD,</a> не говоря уже о нетбуках. А в сериалах на <a href="http://turbofilm.ru" title="turbofilm черные полоски ubuntu">Турбофильме</a> - вообще мигают черные полосы. Конечно  в этот виноват и не Linux вовсе, а разработчики <a href="http://get.adobe.com/flashplayer/" title="Ubuntu флеш тормозит">Adobe</a> которые почему-то<span style="color: #808080;"> (у-у-у теория заговора)</span> не делают нормальный флеш плеер.</p>
+
+<p>Но вместо того что-бы ждать всеобщей поддержки html5, или аппаратного ускорения flash в Ubuntu, всегда можно пойти хитрым обходным путем :).  Я думаю очевидно, что видео-из-интернета во время просмотра хранится где-то на вашем компьютере :). И давно известна фишка, что можно зайти в папку /tmp и проиграть скачанный ролик любимым плеером.</p>
+
+<p>Предлагаю простенький скрипт на Python который <strong>упрощает этот workaround</strong>: заходим любым браузером на любую страницу с видео, жмем play, в случае Turbofilm выбираем язык, в случае Blip.tv или Hulu смотрим рекламу. После чего ставим видео на паузу. Зажимаем заданную комбинацию клавиш (типа Alt+Ctrl+F) и открывается родной плеер (например Vlc или Smplayer) где и смотрим выбранный ролик без тормозов.  <!--more Как такое сделать?--></p>
+
+<p>Проще простого. Скачайте [download#30#nohits], раззипуйте в папку ~/bin и сделайте его исполняемым (chmod +x ~/bin/flashplay).  После чего добавьте удобный вам метод запуска.  Например, сделайте Launcher в меню или назначьте на горячие клавиши в (gnome-keybinding-properties -&gt; Add). Если у вас не установлен <a href="http://thexnews.com/%D1%81%D0%BE%D1%84%D1%82-%D0%B4%D0%BB%D1%8F-ubuntu-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F-2.html#%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D0%BF%D0%BB%D0%B5%D0%B5%D1%80" title="видео плеер ubuntu">Smplayer</a> (а зря :), добавьте к команде название предпочитаемого плеера: [code]~/bin/flashplay ваш_плеер[/code] например: [code]~/bin/flashplay totem[/code]</p>
+
+<p><strong>UPD: </strong><a href="http://thexnews.com/flash-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D0%B2-ubuntu-%D0%B1%D0%B5%D0%B7-%D1%82%D0%BE%D1%80%D0%BC%D0%BE%D0%B7%D0%BE%D0%B2.html#comment-14358">Доп. разъяснения</a>, спасибо Виталию.</p>
+
+<p>В этом способе даже есть преимущества, потому что системный видео плеер имеет привычное управление в отличии от предоставленного на сайте.<span style="color: #808080;"> А в моем случае еще и управляется с пульта</span>.</p>
+
+<p>Пока смотрите ролик, страницу в браузере лучше не закрывать. Если вдруг запустился <em> не тот ролик</em> - перезагрузите страницу.</p>
+
+<p>Скрипт проигрывает самый свежий видеофайл из папки /tmp, если что.</p>
+
+<p>[download#30#image]</p>
+
+<p><strong>PS: </strong>Workaround на workaround'е, ага.</p>

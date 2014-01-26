@@ -1,0 +1,62 @@
+---
+categories: Интернет
+date: 2009/07/05 23:28:24
+description: ''
+permalink: http://thexnews.com/uzbl.html
+tags: ''
+title: Uzbl настройка и установка
+---
+<p><strong>Ссылки</strong><a title="uzbl сайт" href="http://www.uzbl.org/"></a></p>
+
+<p><a title="uzbl сайт" href="http://www.uzbl.org/">Офф сайт</a> / <a href="http://www.uzbl.org/wiki/">Wiki</a> / <a href="http://www.uzbl.org/wiki/">Readme </a>- <strong>eng</strong>!
+<a title="обзор uzbl" href="http://thexnews.com/uzbl-обзор.html">Мой обзор</a></p>
+
+<p><strong>Установка для Ubuntu:</strong></p>
+
+<p>Готовые пакеты из <a title="ubuntu uzbl" href="http://www.uzbl.org/wiki/ubuntu_howto">репозитория</a> устанавливать не советую так как они сильно <strong>устарели</strong>. Свежую версию нужно компилировать из исходников.
+<ol>
+	<li>Добавляем репозитории WebKit в /etc/apt/sources.list [code lang='bash']deb http://ppa.launchpad.net/webkit-team/ppa/ubuntu intrepid main
+deb-src http://ppa.launchpad.net/webkit-team/ppa/ubuntu intrepid main[/code]</li>
+	<li>Устанавливаем зависимости и GIT:[code lang='bash']sudo apt-get update && sudo apt-get install git git-core libwebkit-dev[/code]</li>
+	<li>Скачиваем и компилируем свежую версию[code]git clone git://github.com/Dieterbe/uzbl.git
+cd uzbl
+make
+sudo make install[/code]</li>
+</ol>
+Следуя Философии сразу работать ничего не будет. Нужны правильные конфиги. Потом обязательно нужно будет настроить все по своему, а пока скопируем из примеров: [code  lang='bash']cp -r /usr/share/uzbl/examples/data/s ~/.config
+cp /usr/share/uzbl/examples/config/uzbl/config ~/.config/uzbl/[/code]</p>
+
+<p>Теперь можно запускать браузер коммандой uzbl или скриптом ~/.config/uzbl/scripts/uzbl_tabbed.py (с табами!)</p>
+
+<p><strong>Азы управления</strong></p>
+
+<p>[i] переключает в режим ввода теста (в некоторых версиях [I] c шифтом). То есть <strong>перед тем как написать что-либо в форму, нажимаем i.</strong>
+[Esc] переключает в режим ввода команды. Вот некоторые из них:
+<ul>
+	<li>Чтобы перейти по ссылке: o <em>адрес</em> [Enter]</li>
+	<li>Чтобы найти что-либо на странице /<em>чтоищем</em></li>
+	<li>Назад - b</li>
+	<li>Paste'n'go - p</li>
+	<li>открыть новый таб (если запущен uzbl_tabbed.py) gn</li>
+	<li>следующий таб gt</li>
+	<li>закрыть таб gC</li>
+</ul>
+Остальное можно посметреть и перенастроить под себя в файле "~/.config/uzbl/config"</p>
+
+<p><strong>Некоторые примеры настройки</strong></p>
+
+<p>Настраивается uzbl, естественно редактированием текстового файла "~/.config/uzbl/config"</p>
+
+<p>Неудобство с "<em>o"</em> перед ссылкой компенсируется возможностью сделать шорткаты для часто посещаемых сайтов. Например, что-бы при наборе "d3" открывался dirty.ru: [code  lang='bash']bind    d3        = uri http://dirty.ru[/code]</p>
+
+<p>Удобно так-же добавить шорткаты для поисковиков. Поиск "gi <em>чтоищем</em>" по картинкам Google; "gs <em>чтоищем</em>" поиск на открытом сейчас сайте. [code lang='bash']bind gi _  = uri http://images.google.com/images?q=%s
+bind gs _   = sh "echo uri http://www.google.com/search?q=%s site:`echo $6` &amp;amp;gt; $4"[/code]</p>
+
+<p><strong>Еще фишки</strong></p>
+
+<p>Очень сильно рулит режим "браузинга с клавиатуры". fl подсвечивает все ссылки, а fL все поля ввода и кнопки. После чего просто вводим номер объекта. Мышь не нужна :). А <a title="гугл без мышки" href="http://www.google.com/">Гугл</a>, так вообще рулиться с клавиатуры включением функции <a title="google клавиатура" href="Keyboard shortcuts">Keyboard shortcuts</a>.
+<p><a href="/uploads/uzbl-keyboard-browsing.png"><img class="size-thumbnail wp-image-384 aligncenter" title="uzbl ходим по интернету без мыши" src="/uploads/uzbl-keyboard-browsing-150x150.png" alt="uzbl ходим по интернету без мыши" width="105" height="105" /></a></p></p>
+
+<p>Чтобы открывать новые окна средней кнопкой мыши - ставим <a href="http://www.uzbl.org/wiki/middle_click_links">скрипт</a>.</p>
+
+<p>Чтобы открывать новые <strong>табы </strong>средней кнопкой мыши и с клавиатуры - есть грязный хак от меня. Не публикую, потому что возможно в след версии. это можно будет сделать правильнее. Если нужно - <a href="http://thexnews.com/contacts">пишите</a> - пришлю.</p>

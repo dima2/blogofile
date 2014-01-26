@@ -1,0 +1,70 @@
+---
+categories: Софт
+date: 2009/09/23 11:08:45
+description: DockBarX - удобный, быстрый и компактный док для Ubuntu. Лучше чем на
+  MacOS или Windows 7 :).
+permalink: http://thexnews.com/док-удобная-замена-панели-задач.html
+tags: xfce, удобство, gnome, Best, Ubuntu
+title: Док - удобная замена панели задач
+---
+<p><p style="text-align: center;"><img alt="Док для Ubuntu" class="aligncenter size-full wp-image-430" height="157" src="/uploads/dockbarx2.png" title="Док для Ubuntu" width="506" /></p>
+<p style="text-align: center;"></p></p>
+
+<p><h3 style="text-align: center;">Или как получить в Ubuntu легковесный dock, как на Маках / Windows 7.</h3>
+<p style="text-align: center;"></p></p>
+
+<p>Доки - это будущее интерфейсов. Первыми это поняли и реализовали, естественно в этой их МакОси. Теперь вот концепцию позаимствовали в Windows "<em>семерку</em>" Seven. Linux'ы тоже не отстают, существует сразу несколько реализаций. Только вот зачастую даже разработчики доков, как ни странно не знают, как должен работать док.</p>
+
+<p><strong id="4to_takoe_dock">Как должен работать Dock.</strong>
+<em>(<a href="#ja_znaju_4to_takoe_dock">пропустите абзац</a>, если вы в теме)</em></p>
+
+<p>Итак, док это <em>не</em> только "выезжающая панелька с запускалками программ". Главная особенность дока:
+<blockquote><em>Если программа уже была запущена ранее, то при нажатии на ее иконку в доке она получит фокус, вместо запуска еще одного экземпляра.</em></blockquote>
+Дело в том, что существуют программы, которые <em>нет </em>необходимости закрывать. И которые нужны только в <em>единственном</em> числе, так как содержат<em> свои</em> табы, окна или еще что-нибудь. Например: браузер, пейджер, терминал и файловый менеджер. Эти приложения, иногда, не закрываются целыми днями (месяцами), а только сворачиваются.  Иметь, запускалку на рабочем столе, плюс сворачивалку/разворачивалку в панели задач - неудобно. Логично объединить их в одну иконку.</p>
+
+<p>Сворачивать программы вместо закрытия, особенно актуально сейчас, когда приложения запускаются долго, а оперативной памяти предостаточно.</p>
+
+<p>Также док может выполнять другие полезные функции, например группировку похожих приложений и оповещения. Группировка кстати, незаменима для многооконных программ типа Gimp или Xsane.
+<p id="ja_znaju_4to_takoe_dock"></p></p>
+
+<p>
+[caption id="attachment_426" align="alignleft" width="265" caption="Та-же панель с DockBarX, что и на скриншоте вверху, только настроенная в моем вкусе :)"]<a href="/uploads/dock.png"><img alt="Та-же панель с DockBarX, что и на скриншоте вверху, только настроенная в моем вкусе :)" class="size-full wp-image-426" height="116" src="/uploads/dock.png" title="Ubuntu dock" width="265" /></a>[/caption]</p>
+
+<p>Итак, надеюсь, вы поняли что док это чертовки это удобно и полезно. Для Ubuntu есть целых три нормальных дока -  <a href="http://awn-project.org/" title="Ubuntu osx dock">Avant</a>, <a href="http://do.davebsd.com/" title="ubuntu док">Gnome-do</a> или <a href="http://www.cairo-dock.org/index.php">Cairo</a>. Все они гламурны - красивая анимация, прозрачность всякая. И ресурсов жрут, как Крейсер Ямато, поэтому меня (как минималиста) не устраивают.</p>
+
+<p>Зато, наконец-то допилили  <a href="http://www.gnome-look.org/content/show.php/DockbarX?content=101604" title="ubuntu gnome xfce dock">DockbarX</a> - <em>апплет для панели задач</em>. Т.е можно запихнуть аккуратный док вместо "Task List" на привычной вам панели Gnome или Xfce. Где-нибудь рядом с треем и часами. Без этих громоздких стеклянных выскакивалок :). <!--more Собственно, установка DockbarX--></p>
+
+<p><strong>Установка</strong><strong> DockbarX</strong></p>
+
+<p>Для Ubuntu 9.10</p>
+
+[code lang='bash']
+
+sudo add-apt-repository ppa:dockbar-main/ppa
+sudo apt-get install dockbarx
+#!!!
+
+#Для XFCE устанавливаем поддержку Gnome Applets
+sudo apt-get install xfce4-xfapplet-plugin [/code]
+
+<p><strong>Альтернатива</strong> - брать свежак из SVN'а:
+[code lang="bash"]#устанавливаем зависимости
+sudo apt-get install bzr python-gnome2-desktop python-numpy
+#скачиваем свежую версию
+mkdir -p ~/dockbarx && cd ~/dockbarx && bzr branch https://code.launchpad.net/~dockbar-main/dockbar/experimental && cd experimental
+#устанавливаем
+sudo cp dockbarx.py /usr/bin/ && sudo cp GNOME_DockBarXApplet.server /usr/lib/bonobo/servers/ && mkdir -p ~/.dockbarx && cp -R themes ~/.dockbarx/
+#!!!
+#Для XFCE устанавливаем поддержку Gnome Applets
+sudo apt-get install xfce4-xfapplet-plugin
+[/code]</p>
+
+<p>Теперь можно запустить-посмотреть как оно работает командой "/usr/bin/dockbarx.py run-in-window" или добавить на панель новый апплет "DockBarX".  (Для Xfce - <a href="http://goodies.xfce.org/projects/panel-plugins/xfce4-xfapplet-plugin" title="xfce gnome applets">XfApplet</a>, затем "DockBarX Applet"). Список открытых окон должен отображаться иконками. Осталось добавить <a href="#4to_takoe_dock">основной функционал</a> дока - pin'ы для постоянно используемых программ.</p>
+
+<p><strong>Что-бы добавить Launcher</strong>: Запустите нужную программу, кликните по ее иконке второй кнопкой мыши и выберите пункт "pin application". После закрытия программы теперь иконка ни куда не денется а останется  Launcher.</p>
+
+<p>[caption id="attachment_431" align="alignleft" width="150" caption="Семерка-стайл"]<a href="/uploads/dockbarx3.png"><img alt="Семерка-стайл" class="size-thumbnail wp-image-431" height="150" src="/uploads/dockbarx3-150x150.png" title="Ubuntu Windows 7 dock" width="150" /></a>[/caption]</p>
+
+<p>Кстати, иконки приложений в DockbarX,  больше и корректнее, чем на дефолтном таскбаре.  Работает он гораздо шустрее аналогичных доков. То что надо. Очень удобно - рекомендую попробовать. Ну а если вам все-таки хочется что-бы док "выезжал" из-за краев экрана -  в панелях Gnome и Xfce это легко <a href="/uploads/gnome-panel-settings3.png" title="Док из панели Gnome">настраивается</a>. А можно совсем скопировать док из W7 <a href="http://levviathor.deviantart.com/art/Shinybar1-1-for-Dockbar-update-135875506" title="ubuntu windows7 dock">этой темой</a>.</p>
+
+<p><strong>PS:</strong> Док док док, док док док; док док, док док док. Извините что слово док повторяется слишком часто :).</p>

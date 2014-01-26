@@ -1,0 +1,56 @@
+---
+categories: Интернет
+date: 2009/10/11 13:42:49
+description: ''
+permalink: http://thexnews.com/антиспам-wordpress-обновление.html
+tags: Wordpress, антиспам, спам, скачать, Доктор Хаус, плагины plugin
+title: Антиспам Wordpress 1.2
+---
+<p><img alt="Борьба со спамерами" class="alignleft size-thumbnail wp-image-442" height="150" src="/uploads/doom-150x150.png" title="Борьба со спамерами" width="150" />Бесконечная борьба продолжается - допилил свой <a href="http://thexnews.com/%D0%B0%D0%BD%D1%82%D0%B8%D1%81%D0%BF%D0%B0%D0%BC-wordpress.html" title="wordpress антиспам">антиспамовый плагин</a>. Хорошо работает в связке с <a href="http://code.google.com/p/spam-karma/" title="Wordpress антиспам">Spam Karma</a> или другими "большими" плагинами. Служит для  отсечения совсем уж очевидных спамеров.  <em>Дополняет</em> защиту  от спама следующими функциями:</p>
+
+<p><strong>Модерация</strong></p>
+
+<p>Чтобы спамер не мог извлечь из своей деятельности никакой выгоды, ссылка на его сайт будет доступна только после модерации. Не раскрою тайны, если скажу что ради нее все и делается.
+<ul>
+	<li>Все новые <em>комментарии</em> добавляются <em>без ссылки</em>.</li>
+	<li>В админке Wordpress эти ссылки помечены красным и зачеркнуты.</li>
+	<li>Если вы решите, что комментарий честный - из админки есть возможность "заапрувить" (Approve link) ссылку.</li>
+	<li>Единожды проверенные ссылки будут добавляться без модерации. И с <em>dofollow</em>.</li>
+</ul>
+[caption id="attachment_425" align="aligncenter" width="300" caption="В админке"]<a href="/uploads/graf_antispam2.png"><img alt="В админке" class="size-medium wp-image-425" height="77" src="/uploads/graf_antispam2-300x77.png" title="вордпресс антиспам" width="300" /></a>[/caption]</p>
+
+<p><strong>Фильтрация</strong></p>
+
+<p>Блокирует очевидные спам-комменты. Будет показано следующее подтверждение (текст другой :)</p>
+
+<p>[caption id="attachment_424" align="aligncenter" width="300" caption="Сообщение:  "вы неправы""]<a href="/uploads/graf_antispam.png"><img alt="Сообщение типа " class="size-medium wp-image-424 " src="/uploads/graf_antispam-300x91.png" title="antispam Wordpress" /></a>[/caption]</p>
+
+<p>Спам-бот уйдет, человек (если ничего плохого делать не думал) - имеет возможность исправиться. В "Comments-&gt;Spam" они не попадают (незачем загрязнять базу и затруднять модерацию). Предупреждение показывается, если комментарий:</p>
+
+<p>[caption id="attachment_434" align="alignright" width="150" caption="Не смотрю."]<a href="/uploads/antispam_duplicates.png"><img alt="Не смотрю." class="size-thumbnail wp-image-434 " height="150" src="/uploads/antispam_duplicates-150x150.png" title="wordpress антиспам" width="150" /></a>[/caption]
+<ul>
+	<li>Содержит более 5 ссылок.</li>
+	<li>Не содержит русских букв (для фильтрации заграничного спама).</li>
+	<li>Содержит словосочетания из "Discussion Settings-&gt;Comment Blacklist" в настройках WP.</li>
+	<li>Имя комментирующего похоже на адрес.</li>
+	<li>Точно такой-же комментарий существует (см. скриншот).</li>
+</ul>
+<strong>Фиксы:</strong>
+<ul>
+	<li>Работает с Wordpress 2.8 и выше.</li>
+	<li>В поле url комментария, теперь не появляется постфикс SPAM.</li>
+	<li>Нет нужды редактировать comments.php.</li>
+</ul>
+<!--more  Усилить защиту блога от спама.--></p>
+
+<p><strong>Примеры сообщений:</strong>
+<ul>
+	<li>Извините, слова <em>%слова%</em> находятся в спам-списке. Пожалуйста, скопируйте и исправьте комментарий.</li>
+	<li> Извините, ваш комментарий содержит слишком много ссылок. Пожалуйста, скопируйте и исправьте комментарий.</li>
+	<li> Извините, комментировать можно только по-русски. Воспользуйтесь <a href="http://www.yandex.ru/index_engl_qwerty.html">виртуальной клавиатурой</a>. Пожалуйста, скопируйте и исправьте комментарий.</li>
+	<li> Извините, ваш ник <strong>%ник%</strong> больше похож на адрес. Пожалуйста, выберите другой. Пожалуйста, скопируйте и исправьте комментарий.</li>
+</ul>
+<strong>Установка</strong> - стандартная. Скопируйте "grafs_antispam.php" в папку "wp-content/plugins/" и активируйте в админке.</p>
+
+<p>В базу MySql плагин ничего не пишет. Страницы настройки нет. Изменить текст предупреждений можно редактируя файл grafs_antispam.php.
+<div style="text-align: center;"><a href="http://thexnews.com/antispam" title="голосование wordpress"><img alt="Скачать" src="/plugins/wp-downloadMonitor/img/download.gif" /></a></div></p>

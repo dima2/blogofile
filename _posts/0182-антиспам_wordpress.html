@@ -1,0 +1,28 @@
+---
+categories: Wordpress
+date: 2008/07/01 14:49:09
+description: ''
+permalink: http://thexnews.com/антиспам-wordpress.html
+tags: spam, антиспам, Wordpress, скачать, спам, antispam, плагины plugin
+title: Антиспам Wordpress
+---
+<p><img alt="Wordpress Antispam" class="alignleft alignnone size-medium wp-image-184" height="99" src="/uploads/spammer.png" style="float: left;" title="spammer" width="94" />Спамеры надоели. Хотят высосать мой "пеар три" и жалкий "ТиЦ двадцать". Постыдились бы. Как комары ей богу. Посему устраиваю особо жесткую "карательную акцию" по "обезглавливанию" спамеров. Ведь все ради чего пишутся спам-комменты, это ссылка в Namе-поле коммента. Иногда ради нее, сам комментарий бывает вполне осмысленный. Сразу и не поймешь, что писал спамер. Подробнее читайте у <a href="http://blog.dimok.ru/chto-schitat-spamom-v-kommentariyah" target="_blank" title="Спам в комментариях">Димка</a>. Короче, отныне ссылки будут <strong>сноситься</strong>, если ведут <strong>не на блоги</strong>. На <strong>нормальные</strong>, Human-based блоги, а не сплоги и саттелиты всякие. "Уборка квартир", "Цобаки", "Маги", а главное "Флафф Библия" (А я все-таки узнал что это такое :)) идут лесом. Наивно надеюсь, что когда спамеры поймут, что толку спамить здесь бессмысленно, поток спама станет меньше. В любом случае, хоть ссылок на омносайты не будет.</p>
+
+<p>Хорошего Антиспам плагина так и не нашел. Либо рубит абсолютно невинные коменты (даже без ссылок!), либо написаны слишком сложно. А чем сложнее защита, тем легче найти в ней дырку. Капчу ставить не буду. Поэтому за 10 минут написал свой plugin. Простой как дверь. Плагин "привязывает" к каждой новой ссылке окончание "<em>?SPAM</em>". С этим ярлыком ссылка тупо не показывается. В админке, рядом с каждым комментом (<a href="/uploads/antispam.png" title="Wordpess Антиспам плагин">скриншот</a>), добавлена кнопка "<em>Approve Link</em>", которая этот ярлык стирает. И ссылка появляется, притом с тегом <strong>"DoFollow"</strong>. Для хороших людей, не жалко ;).</p>
+
+<p>Можете скачать и посмотреть мой Супер Антиспам Плагин Для Wordpress. Он действительно очень простой.</p>
+
+<p><strong id="politics">UPDATE: </strong>Немного о моей политике удаления спам комментов. Все комментарии добавляються сразу, но без ссылки. Если текст коммента абсолютно общий, типа <em>"спасибо за статейку", </em>я его непременно снесу. (Что-бы просто выразить мне благодарность за пост, достаточно клацнуть по голосовалке :)). Если текст комментария по теме, но линк ведет на омносаттелит, то коммент я с большой вероятностью оставлю. Но линк может так и не появиться. А если ссылка автора ведет на человеческий блог или нормальный сайт - моя обязанность поставить ее с <strong>DoFollow</strong>.</p>
+
+<p><strong>UPDATE2:</strong> Версия 1.1. Исправлен мелкий баг и усовершенствован алгоритм. Теперь не принимаются комментарии <em>без</em> русских букв (для защиты от заграничного спама, и комментов транслитом), а также вместо имени нельзя писать адрес (как в <a href="http://thexnews.com/антиспам-wordpress.html#comment-606">этом</a> комменте).</p>
+
+<p><!--more Скачать и установить-->
+<p style="text-align: center;"><a href="/uploads/antispam.png"><img alt="Wordpress Антиспам" class="alignnone size-medium wp-image-183 aligncenter" height="91" src="/uploads/antispam-300x91.png" title="antispam" width="300" /></a></p>
+<p style="text-align: center;"></p>
+<p style="text-align: left;">Устанавливается он как и все Wordpress плагины. Что бы все работало совсем красиво, добавьте в текущей теме (Админка-&gt;"<em>Design</em>"-&gt;"<em>Theme Editor</em>"-&gt;Колонка справа "<em>Comments</em>"), после</p>
+<p style="text-align: left;">[code]&amp;amp;lt;!-- You can start editing here. --&amp;amp;gt;[/code]</p>
+<p style="text-align: left;">строку:</p>
+<p style="text-align: left;">[code]&amp;amp;lt;? $comment_author_url=str_replace("?SPAM","",$comment_author_url)?&amp;amp;gt;[/code]</p>
+<p style="text-align: left;">Удачи вам в борьбе со спамерами!</p></p>
+
+<p><div style="text-align: center;"><a href="http://thexnews.com/antispam" title="голосование wordpress"><img alt="Скачать" src="/plugins/wp-downloadMonitor/img/download.gif" /></a></div></p>

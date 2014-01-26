@@ -1,0 +1,27 @@
+---
+categories: Интернет
+date: 2007/08/01 07:22:06
+description: ''
+permalink: http://thexnews.com/fun-with-domains.html
+tags: Интернет, хостинг, домены, Solutions, DNS, email
+title: Fun with domains.
+---
+<p>Зарегистрировать себе адрес в интернете (домен) легко. А вот что делать дальше? Тупо запарковать и надеяться на продажу? Проплачивать хостинг? Здесь опишу разные не совсем очевидные штуки, которые с ними можно проделывать. Например появился у вас www.vash_domen.ru...<!--more-->
+<p align="center"><strong>DNS</strong></p>
+У некоторых регистраторов, (например у <a href="http://ripn.net/" target="_blank" title="Регистратор в зонах RU, SU">RIPN.net</a>), бывают довольно жесткие требования к DNS серверам. Необходимо чтобы их было не меньше четырех, находились они в разных городах (а вдруг ядерная война?), стабильно работали. DNS вашего хостинга могут попросту забраковать. Что делать? Искать другой хостинг? А если этот всем <em>вас</em> устраивает, да еще и бесплатный? На помощь приходит <a href="http://mydomain.com" target="_blank" title="free DNS management">mydomain.com</a>.</p>
+
+<p>Регимся у них, заходим "<strong>manage domains not registered with us"-&gt;"Add domain"-&gt;</strong>вводим ваш<strong>-&gt;"Back to index"</strong>. Теперь идем на сайт регистратора, в панель управления. Там меняем DNS на указанные mydomain (<span class="functiontext">NS1.MYDOMAIN.COM, </span><span class="functiontext">NS2.MYDOMAIN.COM</span><span class="functiontext">...</span>), и ждем некоторое время, пока это все дело обновиться.</p>
+
+<p>Теперь опять на mydomain.com, "<strong>manage domains not registered with us"-&gt;"ваш домен"</strong>. Если <strong>"DNS Status"</strong> равен Active то ОК, если нет проверьте все ли вы сделали правильно и подождите. Дальше нам предлагают заказать (order) три услуги: <span class="functiontext">URL Forwarding, </span><span class="functiontext">Email Forwarding, </span><span class="functiontext">DNS Management. Не бойтесь, стоит каждая по 0.00$. Дальше подробнее.</span></p>
+
+<p><p align="center"><span class="functiontext"><strong>DNS Management</strong></span>
+<span class="functiontext"></span></p>
+
+<p><p align="left">Нужен, если вы хотите привязать домен к хостингу с плохими DNS. (Но виртуальный хостинг должен поддерживаться, т.е в панели управления, должно быть место, где прописать домен. Примеры бесплатных: <a href="http://freehostia.com" target="_blank" title="Бесплатный хостинг без баннеров.">freehostia.com</a> - без баннеров, <a href="http://kwikphp.com" title="бесплатный хостинг">kwikphp.com</a> - понадежнее, и с неограниченным размером файлов.) Делаем на хостинге бесплатный поддомен. Узнаем IP поддомена (<a href="http://net.apollo.lv" target="_blank" title="Online Net Tools">net.apollo.lv</a>-&gt;вводим адрес-&gt;чекаем <strong>"Reverse Lookup"</strong>-&gt;<strong>"Do It"</strong>). Полученый адрес вводим в A DNS record у Mydomain. Ждем.
+В идеале получаем все преимущества выбранного хостинга + надежные DNS.
+<p align="center"><strong><span class="functiontext">Email Forwarding</span></strong></p>
+Классная штука. С ее помощиью можно создать себе email в вашем домене, под управлением <a href="http://gmail.com" target="_blank" title="ИМХО лучшая почта">Gmail</a>, или еще какого-нибудь сервера. В "Forward To" пишите адрес, куда пересылать письма. (например tupoje_imja@gmail.com). Рядом пишете желаемый адрес (krutoe_imja@vash_domen.ru). Теперь письма отправленные на krutoe_imja будут приходить в Gmail. Что-бы отправлять письма с новым адресом <em>из</em> Gmail, в вашем Gmail аккаунте, идем в "<strong>Settings"-&gt;"<span class="psm">Accounts"-&gt;"</span></strong><strong><span class="lk" id="pacf">Add another email address" </span></strong><span class="lk" id="pacf">дальше все просто - следуйте инструкциям. </span></p>
+
+<p>"catch-all address" позволит вам сколько угодно регистрироваться на сайтах, требующих уникальный email ;) . В графе "Forward To" напишите адрес вашего ящика для спама. Теперь письма отправленные на <em>любой</em> email вашего домена будут приходить в этот ящик. (что_угодно@vash_domen.ru)
+<p align="center"><strong><span class="functiontext">URL Forwarding</span></strong></p>
+Нужен, если вы хотите прикрутить домен к блогу, или какому нибудь сайту на бесплатном хостинге, у которых <em>нет собственного DNS</em>. Т.е. ваш сайт будет открываться внутри фрейма mydomain. Вполне себе выход, если c DNS Management не выходит.</p>

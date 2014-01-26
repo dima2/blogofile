@@ -1,0 +1,98 @@
+---
+categories: Solutions
+date: 2008/08/23 14:16:33
+description: Решение наиболее частых по моему опыту проблем связанных с Ubuntu Linux.
+permalink: http://thexnews.com/ubuntu-faq.html
+tags: Firefox 3, Firefox, photoshop, Faq, Ubuntu 7.10, Ubuntu, Solutions, Linux, ubuntu
+  8.04, Wine, VirtualBox, cs2
+title: Ubuntu FAQ
+---
+<p><img alt="Ubuntu Faq" class="alignleft alignnone size-full wp-image-213" height="155" src="/uploads/ubuntu-faq.png" style="float: left;" title="ubuntu-faq" width="150" />На многих компьютерах, поддержка которых висит на мне, установлена замечательная ось -  <a href="http://www.ubuntu.com/" title="Ubuntu Linux">Ubuntu Linux</a>. И мне приходиться решать, и объяснять юзерам одинаковые проблемы. Поэтому, из чистого эгоизма, для себя (ну может быть еще кому нибудь пригодиться), я пишу их краткое описание и решения. В данный момент это актуально для версий 7-8. В будущем планирую пополнить этот список.</p>
+
+<p><strong>UPD</strong>: У меня не всегда хватает времени оформить новые солюшены. Поэтому приоткрою вам лазейку в один мой секретный проект <a href="http://thexnews.com/ubuntu/All" title="ubuntu faq">FAQ по Ubuntu</a> - <strong>внимание </strong>это очень ранняя альфа. Не смотря на это, там много чего полезного. Сам пользуюсь. Будете тестерами ;).
+<ul>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint1">Обязательные действия после установки Ubuntu</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint2" title="ubuntu, pc speaker">Ubuntu выключить PC-Speaker
+</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint3" title="ubuntu caps lock">Отключить CapsLock</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint17" title="ubuntu Настройки клавиатуры не сохраняются">Настройки клавиатуры не сохраняются
+</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint18">При проигрывании видео слишком яркие/неправильные цвета</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint4">Слишком частая проверка дисков в Ubuntu</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint5">Клавиатура от Apple</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint6">Софт для Ubuntu</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint7">Firefox прячет показывает меню при нажатии alt</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint8">Firefox 3 Tab Mix Plus</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint9">Не работает Java в Firefox 3</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint10">Utorrent под Ubuntu сильно тормозит</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint11">Ubuntu создать архив с паролем</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint12" title="ubuntu photoshop cs2">Ubuntu установить и настроить Photoshop CS2</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint14">Проблемы с Virtual Box</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint15">Установить свежую версию Wine</a></li>
+	<li><a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint16" title="ubuntu rar">Не открывается Rar/видео/музыка</a></li>
+	<li><a href="http://thexnews.com/ubuntu/All" title="ubuntu faq">Не нашли?</a> <strong>(alfa)</strong><a href="http://thexnews.com/ubuntu/All" title="ubuntu faq">
+</a></li>
+</ul>
+<!--more Собственно решения-->
+<h3>Ubuntu Faq:</h3>
+<ul class="large-ul">
+	<li id="ubuntu-hint1">Сразу <strong>после установки</strong> Ubuntu следует выполнить:
+[code]sudo apt-get install ubuntu-restricted-extras
+sudo apt-get install preload[/code]Первая комманда установит все необходимое для нормальной работы - кодеки, аудио-видео, поддержку архивов, а вторая ускорит запуск программ.</li>
+	<li id="ubuntu-hint2"><strong>Убить пищалку </strong>или выключить наконец надоедливый <strong>Pc-Speaker</strong>:
+[code]sudo gedit /etc/modprobe.d/blacklist[/code] добавить в конец строку "blacklist pcspkr"</li>
+	<li id="ubuntu-hint3"><strong>CapsLock</strong> выключается в Ubuntu:
+<em>"System &gt; Preferences &gt; Keyboard &gt; Layout &gt; Layout Options &gt; Ctrl key position &gt; Make CapsLock Additional Ctrl"</em></li>
+	<li id="ubuntu-hint4">Слишком <strong>частая проверка дисков</strong>. (каждые 30 запусков, иногда раздражает если включать/выключать компьютер по нескольку раз в день)
+[code]sudo tune2fs -c 0 -i 1m /dev/sda2
+sudo tune2fs -c 0 -i 1m /dev/sda5
+... и так для всех дисков[/code]Это назначит проверку раз в месяц.</li>
+	<li id="ubuntu-hint5">Как подключить <strong>клавиатуру от Apple</strong> или любую другую USB клавиатуру в Ubuntu: <a href="http://thexnews.com/%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%B0-%D0%BE%D1%82-apple-%D0%B8-ubuntu-804.html#more-187" title="клавиатура Apple Ubuntu">здесь</a>.</li>
+	<li id="ubuntu-hint6"><strong>Ubuntu:</strong> <a href="http://thexnews.com/%d1%81%d0%be%d1%84%d1%82-%d0%b4%d0%bb%d1%8f-ubuntu-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d1%8f-2.html" title="Ubuntu софт">какой софт устанавливать</a>.</li>
+</ul>
+<strong>Теперь про проблемы с софтом:</strong>
+<ul>
+	<li id="ubuntu-hint7"><strong>Firefox</strong> прячет показывает меню при нажтии alt (сильно раздражает при смене раскладки)
+"<em>about:config -&gt; compact.menu.altToggle</em>"</li>
+	<li id="ubuntu-hint8"><strong>Firefox</strong> не хочет устанавливать аддоны: (несекьюрно)
+"<em>about:config -&gt; NEW KEY bool extensions.checkUpdateSecurity</em>"</li>
+	<li id="ubuntu-hint8"><strong>Firefox 3</strong> жизненно необходимый плагин Tab Mix Plus находится:
+<a href="http://tmp.garyr.net/dev-builds/" title="Firefox 3 tab Mix Plus">http://tmp.garyr.net/dev-builds/</a></li>
+	<li id="ubuntu-hint9">Не работает Java в <strong>Firefox 3</strong>:
+[code]sudo apt-get remove icedtea-gcjwebplugin[/code]</li>
+	<li id="ubuntu-hint10"><strong>Utorrent</strong> под Ubuntu сильно тормозит:
+"<em>Utorrent-&gt;Options-&gt;Prefences-&gt;Connection-&gt;" </em>Убрать птичек<em> "NAT-PMP"</em> и<em> "Windows Firewall"</em>"</li>
+	<li id="ubuntu-hint11">Ubuntu создать <strong>архив с паролем</strong>:
+Создать пустой архив, затем: "<em>Edit-&gt;Password-&gt;Set Password</em>" и только потом добавлять файлы.</li>
+	<li id="ubuntu-hint12">Ubuntu установить и настроить Photoshop CS2:
+1. <a href="http://thexnews.com/ubuntu-faq.html#ubuntu-hint15">Установить свежую версию Wine</a>
+2.[code]ln -s /dev/sda ~/.wine/dosdevices/c::
+sudo chmod 666 /dev/sda[/code]3.Нормально установить и активировать  Photoshop CS2
+3.[code]sudo chmod 660 /dev/sda[/code]</li>
+	<li id="ubuntu-hint13">Посмотреть сколько свободной оперативки:
+[code]free -m[/code]</li>
+	<li id="ubuntu-hint14">После установки <strong>Virtual Box</strong> следует выполнить
+[code]sudo gpasswd -a USER vboxusers[/code] после чего LogOut, и зайти заново.</li>
+	<li id="ubuntu-hint15">Установить последнюю версию Wine:<em>
+</em>[code]wget -q http://wine.budgetdedicated.com/apt/387EE263.gpg -O- | sudo apt-key add -
+sudo wget http://wine.budgetdedicated.com/apt/sources.list.d/hardy.list -O /etc/apt/sources.list.d/winehq.list
+sudo apt-get update
+sudo apt-get install wine
+[/code]</li>
+	<li id="ubuntu-hint16"> Ubuntu не открывается <strong>Rar</strong>, не играет <strong>видео/музыка</strong>:
+[code]sudo apt-get install ubuntu-restricted-extras[/code]</li>
+	<li id="ubuntu-hint17"> <strong>Настройки клавиатуры не сохраняются</strong><strong>:</strong>
+[code]sudo gedit /etc/X11/xorg.conf[/code]
+и изменяем все вручную. У меня (выключенный CapsLock, переключение по Alt+Shift) выглядит вот так:
+[code]Section "InputDevice"
+Identifier "Generic Keyboard"
+Driver "kbd"
+Option "CoreKeyboard"
+Option "XkbRules" "xorg"
+Option "XkbModel" "pc105"
+Option "XkbLayout" "us,ru"
+Option "XkbOptions" "grp:alt_shift_toggle, ctrl:nocaps"
+EndSection[/code]</li>
+	<li id="ubuntu-hint18"> <strong>При проигрывании видео слишком яркие/неправильные цвета</strong><strong></strong>:
+В настройках видео плеера измените output c "xv" на "x11".</li>
+</ul></p>

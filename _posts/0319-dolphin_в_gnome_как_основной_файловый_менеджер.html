@@ -1,0 +1,56 @@
+---
+categories: Софт
+date: 2009/01/31 18:50:02
+description: ''
+permalink: http://thexnews.com/dolphin-в-gnome-как-основной-файловый-менеджер.html
+tags: nautilus, gnome, kde, dolphin, Ubuntu, Solutions, Linux, d3lphin, идиотизм
+title: Dolphin в Gnome как основной файловый менеджер
+---
+<p>[caption id="attachment_600" align="alignleft" width="150" caption="dolphin kde4"]<a href="/uploads/dolphinkde4.png"><img alt="dolphin kde4" class="size-thumbnail wp-image-600 " height="150" src="/uploads/dolphinkde4-150x150.png" title="Gnome dolphin" width="150" /></a>[/caption]</p>
+
+<p>Я ничего не имею против Gnome, как среды рабочего стола. Но его дефолтный файловый менеджер Nautilus, меня как говориться "просто бесит". Потому что малофункционален. Я тоже поддерживаю принцип "ничего лишнего", но об удобстве в конце концов тоже нужно подумать! Что-бы не быть голословным, вот преимущества KDE'шного <a href="http://dolphin.kde.org/" title="Dolphin gnome">Dolphin</a>'а против Nautilus'а:
+<ul>
+	<li><em>Возможность</em> включить двухпанельный интерфейс. Очень удобно на маленьких экранах типа моего Asus EEE 1000H.</li>
+	<li>Для <em>определенных папок</em>, удобно включать (List View) и предпросмотр (Preview) . А не сразу для всех как у Nautilus.</li>
+	<li>Приятный внешний вид.</li>
+	<li>Подробная информация о файлах и папках.</li>
+	<li>Архивы отображаются как папки.</li>
+	<li>Удобная фишка Filter, позволяющяя показывать/выделять только нужные файлы.</li>
+	<li>И наконец, кликабельная адресная строка.</li>
+	<li>+ еще множество маленьких удобств. Смотрите скриншот.</li>
+</ul></p>
+
+<p>
+Можно было бы просто поставить KDE, мне в принципе все равно. Но в <a href="http://www.geteasypeasy.com/" title="ubunrtu eee">Ubuntu EEE</a> из коробки шел настроенный гном, с парой незаменимых виджетов. Проще было прикрутить к Gnom'у человеческий FM, чем настраивать Кеды с нуля. Что я собственно, и сделал.</p>
+
+<p>[postovoy]<a href="http://thezuber.blogspot.com/" title="ubuntu блог">Zuber</a> рассказывает нам о зачем нужен <a href="http://thezuber.blogspot.com/2009/01/blog-post_08.html" title="антивирус ubuntu linux ">антивирус для Ubuntu</a>.[/postovoy]</p>
+
+<p><!--more Как сделать Dolphin файловым менеджером Gnom'a по умолчанию--></p>
+
+<p><strong>UPD:</strong> Для Ubuntu <strong>9.10</strong> и выше все просто:
+<div class="code">
+<pre style="margin-top: 0pt; display: inline;">[code lang='bash']sudo apt-get install dolphin ark[/code]</pre>
+</div>
+что-бы устаноился только dolphin, без всего KDE (+ark для разархивирования из меню).</p>
+
+<p>Что-бы полностью заменить Nautilus, создайте <em>исполняемый</em> файл ~/bin/nautilus с содержимым:
+<div class="codeheader">Код:</div>
+<div class="code">
+<pre style="margin-top: 0pt; display: inline;">[code lang='bash']#!/bin/bash
+exec dolphin "@"
+exit 0[/code]</pre>
+</div>
+<strong><span style="color: #ff0000;">Для Ubuntu 8.04</span>:</strong></p>
+
+<p>[caption id="attachment_320" align="alignleft" width="150" caption="dolphin kde3"]<a href="/uploads/gnome-dolphin.png"><img alt="gnome-dolphin" class="size-thumbnail wp-image-320" height="150" src="/uploads/gnome-dolphin-150x150.png" title="gnome dolphin" width="150" /></a>[/caption]
+<ol>
+	<li>[code]sudo apt-get install dolphin[/code] Если установить Dolphin чepез apt-get со всеми зависимостями, нормально работать ничего не будет :(. А именно - сеть (remote:/ ), мусорник (trash:/ ) и прочие системные папки требующие io slave. Что-бы заставить их отображаться нужна еще пара пакетов: [code lang='bash']sudo apt-get install kdebase-bin kdebase-kio-plugins[/code]</li>
+	<li>Переходим к проблеме номер 2 - Dolphin в Gnome'вской среде будет выглядеть как неродной. Поэтому устанавливаем и запускаем kcontrol:  [code lang='bash']sudo apt-get install kcontrol && kcontrol[/code] Идем в "Apperance &amp; Themes" где выбираем  гномовские цвета и иконки. Кстати, это подправит все KDE'шные приложения.</li>
+	<li>Когда все работает, делаем что-бы папки открывались Dolphin'ом по умолчанию:  [code lang='bash']sudo gedit /usr/share/applications/nautilus-folder-handler.desktop[/code] и заменяем "nautilus --no-desktop %U" на "d3lphin". Что-бы быстрее открывался при запуске ставим preload:   [code]sudo apt-get install preload[/code]</li>
+	<li><strong>Upd</strong>: Что-бы при вызове Nautilus внешними программами (например DropBox) вместо Nautilus открывался Dolphin выполните комманду:[code lang='bash']mkdir -p ~/bin && touch ~/bin/nautilus && chmod +x ~/bin/nautilus && gedit ~/bin/nautilus &amp;amp;amp;[/code] в открывшейся файл скопируйте [code lang='bash']#!/bin/bash
+exec dolphin "$@"
+exit 0[/code]</li>
+	<li>Для удобного umount'а флешек, добавляем на панель Gnom'а "Drawer", а в него "Disk mounter"</li>
+	<li>Ну и наконец, добавим в меню Actions немного функциональности  - поиск, архиваторы, скрипт для переименования множества файлов (KRename), удаление файлов минуя мусорник, редактирование любого файла Gedit'ом:   [code lang='bash']sudo apt-get install kfind krename ark[/code]  После установки, скачайте у меня готовые расширения для меню (<code>[download#23#nohits]</code>) и раззипуйте в папку "~/.kde/share/apps/d3lphin/servicemenus".</li>
+</ol>
+Пользуемся удобным и функциональным fm ;).</p>

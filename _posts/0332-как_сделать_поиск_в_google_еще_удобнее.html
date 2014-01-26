@@ -1,0 +1,32 @@
+---
+categories: Интернет
+date: 2009/04/19 15:49:13
+description: ''
+permalink: http://thexnews.com/как-сделать-поиск-в-google-еще-удобнее.html
+tags: Firefox 3, Интернет, google, Firefox, поиск, JavaScript, удобство
+title: Как сделать поиск в Google еще удобнее
+---
+<p><a href="/uploads/google-find.png"><img alt="google-find" class="alignleft size-thumbnail wp-image-333" height="150" src="/uploads/google-find-150x150.png" title="google-find" width="150" /></a><a href="http://www.google.com/" title="Google поиск">Google</a> это конечно наше все, но надо признать, что в сторону удобства поиска еще есть куда стремиться. Пара советов, как приблизить поиск к совершенству. Ну, или во всяком случае сделать немного удобнее :).</p>
+
+<p>Улучшать естественно будем с помощью моего любимого инструмента - <a href="http://thexnews.com/%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D1%8B-%D0%B4%D0%BB%D1%8F-firefox-3.html" title="Firefox плагин Google">Firefox</a>, и не менее замечательного аддона для него - <a href="https://addons.mozilla.org/en-US/firefox/addon/748" title="Google аддон">Greasemonkey</a>. Который позволяет изменять страницы как нам заблагорассудиться с помощью <a href="http://userscripts.org/" title="greasemonkey скрипты">JavaScript</a>.</p>
+
+<p><!--more Как добавить к строке поиска Google удобный выбор времени и места -->
+<p style="text-align: left;">Для запуска скриптов необходимо установить плагин <a href="https://addons.mozilla.org/en-US/firefox/addon/748" title="Google аддон">Greasemonkey</a>.</p></p>
+
+<p><p style="text-align: left;">Итак,<strong> проблема номер 1</strong> - Гугл иногда дает верные, но <strong>устаревшие результаты</strong>. Например, если я ищу статью по настройке VPN для Ubuntu, то результаты для старых версий мне неинтересны. Зачем мне знать, как это делалось в 2005 году? А чтобы показывались результаты только за последние несколько месяцев (с момента выхода нужной мне версии) надо лезть в настройки или вспоминать <a href="http://www.google.com/help/cheatsheet.html" title="Google syntax">синтаксис</a>. Что долго.
+Скрипт, <strong>который всегда показывает выбор даты</strong> поиска уже <a href="http://userscripts.org/scripts/show/38800" title="Google устаревшие результаты">написан (UPD)</a>. Мало того можно выбирать <strong>время точнее</strong>, чем в стандартных настройках. Кстати, если вас раздражают старые результаты в выдаче, стандартным поиском можно поставить сразу <a href="http://mycroft.mozdev.org/search-engines.html?name=google+past+2+years" title="Google">Google за прошедшие два года</a>.
+</p><p style="text-align: left;"><strong>Вторая проблема</strong> - региональный поиск. Тоже изменяется в настройках, но мне например, необходимо <strong>быстро переключаться между глобальным, русским и другими локальными поисками</strong>.  Для этого я написал свой скрипт. Его установить немного сложнее.</p>
+<p style="text-align: center;"></p>
+<p style="text-align: center;"><a href="/uploads/google-multi-lang.png"><img alt="google-multi-lang" class="size-thumbnail wp-image-334 alignnone" height="99" src="/uploads/google-multi-lang-150x99.png" title="google-multi-lang" width="150" /></a></p></p>
+
+<p><ol>
+	<li>Вопервых, надо переключить Google поиск по умолчанию на глобальный. Идем на <a href="http://www.google.com/">Google.com</a> (переадресовывает на поиск нашей страны) и нажимаем <span><a href="http://www.google.com/ncr">Google.com in English</a>. Все, теперь результаты будут независимы от места расположения.</span></li>
+	<li><span>Скачиваем <a href="http://thexnews.com/download/google-languige-switch.zip" title="Google переключать языки">мой скрипт</a>. Открываем любым текстовым редактором, находим строки [code] LangAdd("en");
+LangAdd("ru");[/code] Можно добавить свою страну - например <code>LangAdd("uk");</code> для Украины.</span></li>
+	<li><span>Отредактированный скрипт перетаскиваем на окно Firefox, соглашаемся с установкой.</span></li>
+	<li><span>Теперь, рядом со строкой поиска появиться выбор языка. (См. скриншот)
+</span></li>
+</ol>
+<span>Релевантного вам поиска!</span></p>
+
+<p><span><strong>UPD:</strong> Еще несколько <a href="#comment-6825" title="google firefox add-ons">полезных советов</a> от </span><strong><a href="http://smilehacker.com/">Mikhail</a>!</strong></p>

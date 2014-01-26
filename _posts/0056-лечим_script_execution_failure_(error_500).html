@@ -1,0 +1,20 @@
+---
+categories: Solutions
+date: 2007/08/30 14:04:57
+description: ''
+permalink: http://thexnews.com/лечим-script-execution-failure.html
+tags: Script Execution Failure, Интернет, php скрипт, Error 500, скачать
+title: Лечим Script Execution Failure (Error 500)
+---
+<p>Меня достало, что на некоторых хостингах (как платных или бесплатных), после заливки скриптов по FTP и попытке запуска, выходит:</p>
+
+<p><strong>Error 500: Script Execution Failure</strong></p>
+
+<p>Это из-за  того, что скриптам не хватает прав. Изменять их вручную долго. Вообщем, вот лекарство.<!--more--></p>
+
+<p>Скрипт, который меняет права 755 всему до чего может дотянуться. Залить в корень сайта (где index.*** лежит) через <em>веб-интерфейс хостинга</em> <strong>или</strong> через <em>ftp-менеджер и дать ему права 755.</em> Запускать каждый раз, когда появляется <strong>Error 500.
+</strong></p>
+
+<p>Если у вас были где-то выставлены  права отличные от 755, придется их ставить заново.</p>
+
+<p><code>[download#9#nohits]</code></p>

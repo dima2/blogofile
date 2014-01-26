@@ -1,0 +1,39 @@
+---
+categories: Софт
+date: 2008/04/21 19:43:55
+description: ''
+permalink: http://thexnews.com/и-все-таки-kde-4.html
+tags: лучший, KDE 4, old, И.М.Х.О., Ubuntu
+title: И все таки KDE 4
+---
+<p><img align="left" alt="KDE 4 Ubuntu" src="/uploads/kde4_logo_preview.png" title="KDE 4 Ubuntu" />Установил <a href="http://www.kde.org/screenshots/">KDE4</a>. И стал чуточку счастливее. :) Решил попробовать эту оболочку, потому что самые используемые мною программы: <a href="http://www.krusader.org/screenshots.php" target="_blank" title="Krusader">Krusader</a>, <a href="http://www.kdenlive.org/screenshot.php" target="_blank" title="KDENLIVE">Kdenlive</a>, <a href="http://smplayer.sourceforge.net/" target="_blank" title="SMPLAYER">SMPlayer</a> написаны именно под KDE. А в <a href="http://www.ubuntu.com/" target="_blank" title="ubuntu">Ubuntu</a> установлена противоположная оболочка - Gnome. Соответственно под Gnome эти софтины дольше грузяться и всячески глючат. Систему я  все  равно буду скоро сносить, во первых выходит новая <a href="http://www.ubuntu.com/" target="_blank" title="Ubuntu">Ubuntu 8.04</a>,  а во вторых у меня к этому событию приурочена смена харда.  Так что почему бы не поэксперементировать напоследок? <!--more--></p>
+
+<p>Это не Kde 1, и система у меня не FreeBSD  :smile: , так что установилось все просто:
+<ol>
+	<li>Добавть в sources.list новый репозиторий:
+[code]gksu gedit /etc/apt/sources.list[/code]</li>
+	<li>Дописать в конец файла:
+[code]deb http://ppa.launchpad.net/kubuntu-members-kde4/ubuntu gutsy main[/code]</li>
+	<li>Закрыть и сохранить файл.</li>
+	<li>Апдейтить apt:
+[code]sudo apt-get update[/code]</li>
+	<li>И наконец установить KDE 4.0:
+[code]sudo apt-get install kde4-core[/code]</li>
+	<li>Теперь в Login screen, в Options-&gt;Sessions, можно переключиться на KDE 4.</li>
+</ol>
+Больше всего порадовал новый дизайн - Oxygen. Предыдущий, версии 3.5, меня ужасно раздражал. Oxygen же похож одновременно на Leopard и Aero Glass - два моих любимых стиля. Выглядит просто великолепно - даже менять ничего не пришлось.</p>
+
+<p>Файловый браузер, Dolphin, несомненно лучше Gnom'овского Nautilus'а. Эргономичнее, и содержит множество маленьких удобностей, которых мне так не хватало в Nautilus. Вообще у всех элементов KDE логичный и продуманный интерфейс.</p>
+
+<p>Krusader и все те программы, из за которых я и устанавливал KDE 4, оправдали ожидания, и запускаются почти мгновенно. Из серии не ждали, а оно заработало: стали нормально отображаться окна Nero.</p>
+
+<p>Замена иконок рабочего стола на виджеты показалась мне странной. При наведении на иконку мыши появляются ненужные вроде кнопки вертеть-увеличить-удалить. Поначалу, я все время случайно кликал на них.  :smile: Оказалось что их можно "залочить": правой кнопкой на десктопе-&gt;Lock Widgets. И все будет Ок.</p>
+
+<p>Кстати насчет виджетов. Командой
+[code]sudo apt-get install extragear-plasma[/code]
+Можно уставить их всяких-разных. В том числе и желтый стикер. Полезная вещь, существует в принципе для все систем. Только вот мне всегда было как-то лениво этот виджет искать и устанавливать. А так раз - и готово :) .</p>
+
+<p>Глюков конечно хватает. Но большинство из них из за того, что KDE, ставилась на Gnome, например неудаляемые иконки и автозагрузка кучи ненужных программ.
+Если сделать таскбар маленького размера, то меню будет появляться неизвестно где. Неприятно. Да, и после каждого изменения  интерфейса приходиться делать logoff/logon. Сначало были очень маленькие, нечитаемые шрифты, что-бы это исправить надо поставить "Force fonts DPI" равным 96 в System Stettings-&gt;Apperance-&gt;Fonts.</p>
+
+<p>Вообщем, теперь я голосую за KDE. И всячески рекомендую. 25 числа поставлю <a href="http://kubuntu.com/" target="_blank" title="Kubuntu">Kubuntu</a> - сборку Ubuntu с KDE 4.</p>

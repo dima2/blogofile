@@ -1,0 +1,34 @@
+---
+categories: Этот безумный, безумный мир
+date: 2008/08/15 21:56:51
+description: ''
+permalink: http://thexnews.com/слишком-много-кода.html
+tags: scource, Wordpress, идиотизм, подсветка кода, постраничная навигация
+title: Слишком много кода...
+---
+<p><a href="/uploads/theircode.png"><img alt="1. WP Page Numbers" class="alignleft size-thumbnail wp-image-195" height="150" src="/uploads/theircode-150x150.png" style="float: left;" title="theircode" width="150" /></a>Сейчас пишу тему для Wordpress. Там нужно реализовать постраничную навигацию. Для этого есть специальный плагин - <a href="http://wordpress.org/extend/plugins/wp-page-numbers/" title="номера страниц wordpress">WP Page Numbers</a> называется. В нем <em>570 </em><em>(пятьсот семьдесят)</em><em> строчек кода!</em> И это не считая CSS (см. скриншот). Я не понимаю, почему надо настолько усложнять такие простые вещи :???:?</p>
+
+<p>У меня это заняло 20 строк с подробными комментариями (см. под кат). Правда в плагине Page Numbers есть поддержка стилей, а в моем примере правильно было бы добавить какой нибудь CSS. Но это мало что меняет...</p>
+
+<p><strong>PS:</strong> Что-бы выложить эти 20 строчек кода, нужно их оформить. Хотел скачать <a href="http://wordpress.org/extend/plugins/wp-syntax/" title="подсветка кода wordpress">плагин для подсветки кода</a>, но он оказался еще монстроурознее - <em>1.3 мегабайта</em>. Это, блин, почти как сам Wordpress! Слава богу, что для оформления кода нашелся отличный сервис <a href="http://www.stevetrefethen.com/highlighter/default.aspx">CodeHighlighter</a>.<!--more Моя версия на 20 строк--></p>
+
+<p>[code]1 $maxp=5; //Количетво видимых страниц
+2 $pcnt=$wp_query-&gt;max_num_pages; //Количетво страниц всего
+3 // get_pagenum_link(номер)— функция WP, возвращает ссылку на страницу
+4
+5 if ($pcnt&gt;1)
+6 {
+7 if (!$paged) {$paged = 1;} //Номер текущей страницы
+8 else {echo "&lt;a href='".get_pagenum_link($paged-1)."'&gt;« Prev&lt;/a&gt;";}
+9
+10 for ($i=1; $i&lt;=$pcnt; $i++)
+11 {
+12 if (($i&gt;$maxp)&amp;&amp;($i&lt;$pcnt-$maxp)) {$i=$pcnt-$maxp+1; echo " —";}
+13 //Если нарисовали первые $maxp страниц,
+14 // ставим многоточие, и рисуем последние $maxp страниц
+15 if ($i!=$paged) {echo " &lt;a href='".get_pagenum_link($i)."'&gt;$i&lt;/a&gt;";}
+16 else echo " $i";
+17 }
+18
+19 if ($paged!=$pcnt) {echo "&lt;a href='".get_pagenum_link($paged+1)."'&gt;Next »&lt;/a&gt;";}
+20 }[/code]</p>

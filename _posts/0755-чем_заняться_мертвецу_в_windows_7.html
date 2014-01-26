@@ -1,0 +1,73 @@
+---
+categories: Софт
+date: 2010/04/29 10:26:11
+description: ''
+permalink: http://thexnews.com/чем-заняться-мертвецу-в-windows-7.html
+tags: И.М.Х.О., Windows, Ubuntu 10.04, Ubuntu, Windows 7, Оффтоп, идиотизм
+title: Чем заняться мертвецу в Windows 7
+---
+<p><img alt="Windows 7" class="alignleft size-full wp-image-787" height="150" src="/uploads/dead_w7.png" title="Windows 7" width="150" />
+<p style="text-align: right;"><em>Выходу Ubuntu 10.04 посвящается :).</em></p></p>
+
+<p>Мне тут пришлось поработать в Windows 7... Не хватало многих привычных Линуксовых фич. Было бы чистой воды троллингом говорить что в Винде их реализовать нельзя. Все можно сделать (только иногда через жъ, но когда это нас останавливало?). Расскажу про необходимый набор программ, которые сделали работу под Windows 7, более менее привычной для <em>меня </em>после Linux.</p>
+
+<p>А что-бы добить до нужного числа символов, во второй части будут личные впечатления. Про то как обстоят дела с теми вещами, которые меня дико бесили в предыдущих версиях Windows, и из за которых я собственно на Linux и c<span style="text-decoration: line-through;">беж</span> <a href="http://thexnews.com/ubuntu-linux-vs-windows-vista.html" title="Ubuntu vs Windows 7">перешел</a>. Не прошло и пары лет, как по  поводу названой в честь Семи Смертных Грехов :evil: (или в честь фильма  Финчера) операционки <!--more у меня выкристаллизовалось четкое мнение--></p>
+
+<p>[toc]
+<h4>Необходимые программы</h4>
+Когда я привычно зажимал <strong>Alt</strong>, чтобы <strong>подвинуть мышкой окно</strong>, ничего не происходило. То есть перемещать окошки можно только держась за заголовок. Что-бы зажав Alt двигать их мышкой зацепившись за любую часть окна, добавляем в автозагрузку этот <a href="http://www.howtogeek.com/geekers/AltWindowDrag.zip" title="Windows 7 Alt перетаскивать окна ">простой скриптик</a> от <a href="http://www.howtogeek.com/howto/windows-vista/get-the-linux-altwindow-drag-functionality-in-windows/" title="Windows 7 перемещать окна как в Linux">HowToGeek</a>.</p>
+
+<p>[caption id="attachment_815" align="alignright" width="150" caption="Always On Top"]<a href="/uploads/always-on-top.png"><img alt="Always On Top" class="size-thumbnail wp-image-815" height="150" src="/uploads/always-on-top-150x150.png" title="Windows 7 окно всегда вверху always-on-top" width="150" /></a>[/caption]</p>
+
+<p>Я представить себе не могу, как люди живут без функции <strong>Always-On-Top для любого окна</strong>. Самый простой случай - как можно работать в полноэкранной программе (например развесистом IDE), и одновременно при этом поглядывать в задание/спецификацию? Постоянно переключаться через Alt+Tab? Распечатать лист и положить рядом? А с помощью <a href="http://www.abstractpath.com/powermenu/" title="Windows 7 всегда вверху, always on top">PowerMenu</a> делаем pdf-reader или браузер  "плавающим над всеми окнами", и комфортно работаем. Плюс есть возможность менять окнам приоритеты и сворачивать окна в трей, что тоже полезно.</p>
+
+<p><em>Klipper </em>- Я честно фигею, от того что <a href="http://www.google.com/search?q=windows+7+clipboard+manager">элементарные программки</a>, типа<strong> менеджера буфера обмена </strong>для Windows, весят дикие десятки мегабайт, требуют фреймворков или стоят  денег! Еле удалось найти бесплатный <a href="http://bluemars.org/clipx/" title="Windows 7 cipboard  manager">ClipX</a> на 100кб. По комбинации  Alt+Ctrl+V выводит меню с последними скопированными строками. Можно выбрать то что копировал раньше, а не только последнюю. Кстати, тоже  не понимаю, как без него можно жить.</p>
+
+<p>Файловая система <strong>Ext3</strong>, в которой у меня уже давно хранятся все данные, под  W7 доступна через <a href="http://thexnews.com/ubuntu/%D0%9F%D0%BE%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%B8%D1%81%D0%BA%D0%B8%20ext2-ext3%20%D0%BF%D0%BE%D0%B4%20Windows%207" title="Windows 7 ext2 ext3">Ext2Fsd</a> .<a href="http://thexnews.com/ubuntu/%D0%9F%D0%BE%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%B8%D1%81%D0%BA%D0%B8%20ext2-ext3%20%D0%BF%D0%BE%D0%B4%20Windows%207" title="Windows 7 ext2 ext3">
+</a></p>
+
+<p>[caption id="attachment_813" align="alignright" width="150" caption="Управление окнами (grid/tile)"]<a href="/uploads/ecran.png"><img alt="Управление окнами (grid/tile)" class="size-thumbnail wp-image-813 " height="150" src="/uploads/ecran-150x150.png" title="Windows 7 Управление окнами (grid/tile)" width="150" /></a>[/caption]</p>
+
+<p>А вот на больших мониторах (24" дюйма сейчас доступны каждому), другая проблема. Для  удобства, необходимо как-то управлять окнами. Изменять размер, и раскладывать их "плиткой" что-бы несколько окон были видны одновременно. Под Ubuntu я привык пользоваться<em> Compiz Grid</em>, или функциями <em>Openbox</em>. По Семеркой это реализуется <a href="http://www.winsplit-revolution.com/" title="Windows 7 tile">WinSplit</a>.</p>
+
+<p>Задисейблить Caps Lock и вообще <strong>переназначить кнопки на клавиатуре</strong> можно с помощью <a href="http://www.randyrants.com/2008/12/sharpkeys_30.html" title="Переназначить remap клавиатуру Windows 7">Sharp Keys</a>. Использую что-бы поставить тильду в правый верхний угол, в не зависимости от того где там эти китайцы разместили ее на клавиатуре. Ну и что-бы с Appl'овской клавиатурой нормально работать.</p>
+
+<p>Мой любимый <a href="http://thexnews.com/%D1%81%D0%BE%D1%84%D1%82-%D0%B4%D0%BB%D1%8F-ubuntu-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F-2.html#%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D0%BF%D0%BB%D0%B5%D0%B5%D1%80" title="лучший видео плеер">проигрыватель видео Smplayer</a> есть и <a href="http://smplayer.sourceforge.net/downloads.php?tr_lang=en" title="smplayer windows">для windows</a>. И не надо ставить кучу кодеков.</p>
+
+<p>Аналог моей любимой тулзы для <strong>снятия скриншотов</strong> <em>ksnapshot</em> уже встроен в систему! Snipping Tool называеться.  Осталось <a href="http://www.intowindows.com/how-to-create-a-keyboard-shortcut-for-snipping-tool-in-windows-7/" title="скриншоты Windows 7">присвоить ей какой нибудь шорткат</a>. То есть, запуская утилитку она предложит вам вырезать кусок экрана, и сразу его скопировать.
+<h4>Впечатления</h4>
+И тут такой поскриптум на три тысячи символов. В семерке исправили множество вещей которые раздражали меня в XP/Vista. Разберем по пунктам. Начинаю ворчать.</p>
+
+<p>Антивирус по традиции люто-дико тормозит систему (nod32 4). И не надо говорить про слабое железо. Я не обираюсь делать апгрейд, только для того что-бы впустую скармливать ресурсы антивирусу. Глупо это все.</p>
+
+<p><a href="/uploads/newdevice.png"><img alt="Windows 7 установка устройств" class="alignright size-full wp-image-771" height="77" src="/uploads/newdevice.png" title="Windows 7 установка устройств" width="262" /></a>Когда втыкаешь в USB мышку, система секунд 20-30 "Installing device driver software", и только потом курсор начинает двигаться. Серьезно, у меня это очень частый случай. Ubuntu понимает все за полсекунды. Но должен признать что у Windows 7 такая проблема возникает <em>только при первом подключении</em> для каждого порта USB.</p>
+
+<p>[caption id="attachment_791" align="alignright" width="150" caption="И так всегда..."]<a href="/uploads/jauns10.png"><img alt="И так всегда..." class="size-thumbnail wp-image-791" height="150" src="/uploads/jauns10-150x150.png" title="Windows Update" width="150" /></a>[/caption]</p>
+
+<p>Перезагрузка-перезагрузка-перезагрузка. Cо времен икспишки стала немного реже. После каждого второго действия необходимо перегружаться. Драйвер - перезагрузка. Более менее сложная программа - перезагрузка. Сменил локаль (а utf-8 до сих пор нет) - перезагрузка. Постоянные обновления - перезагрузка. Сколько можно? А грузиться 7ка, надо сказать не быстро. При этом обожает ставить те же апдейты при включении-выключении, превращая компьютер на какое-то время в бесполезный кирпичик. А потом еще заново все проги перезапускать! Нет. Не могу так работать. По совести должен признать, что hibernate/resume у семерки работает быстрее чем у моей Ubuntu. Но вот необходимость перезагрузки все портит.</p>
+
+<p>[caption id="attachment_776" align="alignright" width="211" caption="rm -rf"]<a href="/uploads/deletewindows.png"><img alt="rm -rf" class="size-full wp-image-776  " height="130" src="/uploads/deletewindows.png" title="Удалть папку Windows 7" width="211" /></a>[/caption]</p>
+
+<p>С правами пользователей ситуация улучшилась. Например я не смог подмонтировать <a href="http://thexnews.com/ubuntu/%D0%9F%D0%BE%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%B8%D1%81%D0%BA%D0%B8%20ext2-ext3%20%D0%BF%D0%BE%D0%B4%20Windows%207" title="Windows 7 ext2 ext3">диски ext2</a> без "Run As Administrator" :). Paint (кстати достойная прога!) в корень диска C:\ ничего сохранить не дает. И мою любимую забаву - удаление папки  Windows, мне провести не дали. Бу.</p>
+
+<p>Раздражающие попапы - исправили. Можно сделать "Hide Icon and Notifications" для "Action Centra", который парит сообщениями что "Система Вопасности!". Но до notify-osd или Growl еще далеко.</p>
+
+<p>[caption id="attachment_770" align="alignright" width="212" caption="Зачем столько места?"]<a href="/uploads/skokamesta.png"><img alt="Зачем столько места?" class="size-full wp-image-770 " height="118" src="/uploads/skokamesta.png" title="Windows 7 vs Ubuntu место на жестком" width="212" /></a>[/caption]</p>
+
+<p>Я все еще не могу понять, какого черта оно жрет столько места. В смысле и сам Windows  и, Программы. Особенно по сравнению с моей кастомной Ubuntu, без проблем базирующейся на 5 гигах. И почему все время дергает жеский диск? Понятно, антивирус и.т.д. Во-первых шумит, а во вторых как бегать с работающим ноутом? Опять же моя Ubuntu при нересурсоемкой работе обращается к диску где-то раз в 50 секунд.</p>
+
+<p>Часы в лево панели задач до сих перетащить нельзя. Не логично же,  наручные ношу всегда на левой руке.</p>
+
+<p><a href="http://thexnews.com/%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D1%8B-%D0%B4%D0%BB%D1%8F-firefox-3-2.html" title="Плагины для Firefox Windows 7">Firefox  со всеми моими аддонами</a> запускается в 2.7 раза медленнее чем на   Ubuntu. Нормальной консоли нет.</p>
+
+<p>[caption id="attachment_820" align="alignright" width="150" caption="Чорт."]<a href="/uploads/capture2.png"><img alt="Чорт." class="size-thumbnail wp-image-820" height="150" src="/uploads/capture2-150x150.png" title="capture2" width="150" /></a>[/caption]</p>
+
+<p>Насчет красивой темки. Вся эта прозрачность так и подмывает поставить на рабочий стол (о ужас!) Wallpaper. Зато они сами меняются, прикольно. Ну а через пару дней начинает надоедать.</p>
+
+<p>А еще я супер профессионально провел  бенчмарк. Игрушка Метро 2033 на одной и той же машине под 7кой давала 4 FPS, а под XP и Wine - вообще вылетела. Победитель очевиден.
+<h4>ИМХО Вывод</h4>
+Классная система, честное слово. Вот только не для меня :/. Так как ИМХО вообще все существующие опрационки <span style="text-decoration: line-through;">отс </span>несовершенны. Просто Linux раздражает меньше.</p>
+
+<p><strong>PS:</strong> Внимание! Эта статья была написана под Windows 7. Так что на всякий случай я не за что не отвечаю.</p>
+
+<p><strong>PPS:</strong> Да я знаю, писать здесь про W7 против <a title="">правил</a>. Пытался себя за это забанить, честно.</p>

@@ -1,0 +1,51 @@
+---
+categories: Webmaster
+date: 2008/01/25 22:11:19
+description: ''
+permalink: http://thexnews.com/wordpress-плагин-для-голосования.html
+tags: Интернет, Wordpress, плагины plugin, блоги, скачать
+title: Wordpress плагин для голосования
+---
+<p><p style="text-align: center;"><img alt="Wordpress olugin голосование" src="/uploads/vote.jpeg" /></p></p>
+
+<p>Любому блоггеру важно знать, что думают читатели о его творчестве. Быть в курсе, какие посты посетителям нравятся, что-бы "писать еще". Вовремя удалять или исправлять, неудачные посты. Особенно если у вас не лытдыбр, а тематический блог. Вот только комментируют далеко не все. У случайного посетителя, как правило, нет времени и желания, что-то придумывать и писать вменяемый отзыв. А на систему оценки "пять звездочек", вообще редко кто обращает внимание.</p>
+
+<p><em> Задача: сделать заметные, интуитивно понятные кнопки голосования - за и против. При голосовании страница не должна перезагружаться. Посетитель не может голосовать несколько раз.</em></p>
+
+<p>Что получилось - читайте дальше.<!--more--><em> </em></p>
+
+<p>[warning]У этой статьи есть <a href="http://thexnews.com/wordpress-%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-2.html" title="wordpress голосование">более свежая версия</a>! Мы настоятельно рекомендуем к ознакомлению именно ее. А то знаете, время  течет вперед беспощадно, и эта статья успела немного устареть. Спасибо.[/warning]</p>
+
+<p>Сначала я нашел готовый плагин для Wordpress - <a href="http://wordpress.org/extend/plugins/vote-it-up/#post-2678" target="_blank" title="Плагин голосования Wordpress">Vote It Up</a>. Он отвечал почти всем моим требованиям. Только вот кнопочки "за" и "против" были слишком мелкие. И вообще вид был слишком гиковский, как то сразу и не понятно, что это голосовалка:
+<p style="text-align: center;"><img alt="Wordpress плагин голосования" src="/uploads/voteituppreview.jpeg" /></p></p>
+
+<p>Однако по заверениям разработчиков, плагин "totally customizeable" и я решил сделать на его базе что-то свое.Самыми очевидными символами я выбрал "кулак большим пальцем вверх" и "кулак большим пальцем вниз". Все таки, люди знают эти символы еще со времен  гладиаторских поединков, тогда это значило помиловать/убить :) . Для усиления интуитивности, кнопки большие, и подкрашиваться в цвет жизни (зеленый) и крови (красный) :)  . Что получилось, смотрите в любом посте моего <a href="http://thexnews.com/" target="_blank">блога</a>, в действии это выглядит привлекательнее чем на скриншотах. Теперь читатель сразу поймет что к чему, и оценка поста у него займет меньше секунды. Проверено. На моем блоге, посетители стали голосовать чаще. Чего, собственно, я и добивался.</p>
+
+<p>Хотите узнать что думают о <em>вашем</em> блоге? Качайте плагин. ;)
+<p align="center"><strong>Установка. </strong></p></p>
+
+<p>Для начала установите plugin <a href="http://downloads.wordpress.org/plugin/vote-it-up.1.0.3.zip" target="_blank" title="Плагин голосования Wordpress">Vote It Up</a>. Версии 1.0.3 на всякий случай. Его надо раззиповать в "wp-content/plugins/" , и <strong>(внимание!)</strong> переименовать папку "vote-it-up" в "voteitup", не то получите "<em>Fatal Error at Install</em>". Активировать в админке wordpress, зайти в опиции ("Options"-&gt;"Vote It Up"). "<em>Allow guests to vote</em>" и "<em>Allow visitors to vote against posts</em>" поставить на "<em>Yes</em>".</p>
+
+<p>Теперь пора устанавливать мой мод. Скачайте его (кнопка где-то рядом :) ). Если фон вашего блога не белый, перекрасьте png'шки в любом графическом редакторе. Закачайте файлы: "vote1.png", "vote2.png", "vote3.png", "vote4.png", "votestyles.css", "votingfunctions.php" в папку "wp-content/plugins/voteitup/" (Заменяя существующие).</p>
+
+<p>Зайдите в папку вашей текущей темы "wp-content/themes/<em>название_темы</em>". Измените файлы <strong>"single.php"</strong> ,<strong>"index.php"</strong>, <strong>"page.php"</strong> (одиночный пост, главная, статичные страницы - не обязательно все присутствуют):</p>
+
+<p>После строки "&lt;?php get_header(); ?&gt;", добавьте код:  [code lang="php"]< ?php VoteThumbUpInit(); ?>[/code]</p>
+
+<p>Ну а где-то между "&lt;?php while (have_posts()) : the_post(); ?&gt;" и "&lt;?php endwhile; ?&gt;" добавьте строку: [code lang="php"]< ?php VoteThumbUp(0); ?>[/code]
+<ul>
+	<li>Если вместо "<span style="color: #0000ff;"><strong>0</strong></span>" поставить "1", то голосовалки будут отображаться <em>только</em> на странице поста.</li>
+	<li>А если хотите немного подправить текст -  редактируйте  "votingfunctions.php" (в самом конце)</li>
+</ul>
+Должно работать.  Будут вопросы - задавайте ;).</p>
+
+<p>[warning]У этой статьи есть <a href="http://thexnews.com/wordpress-%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-2.html" title="wordpress голосование">более свежая версия</a>! Мы настоятельно рекомендуем к ознакомлению именно ее. А то знаете, время  течет вперед беспощадно, и эта статья успела немного устареть. Спасибо.[/warning]
+<div style="text-align: center;"><a href="http://thexnews.com/vote-it-up" title="голосование wordpress"><img alt="Скачать" src="/plugins/wp-downloadMonitor/img/download.gif" /></a></div>
+<strong>PS:</strong> Разработчики обещали добавить статистику в админку только в следующих версиях. Поэтому я написал временную функцию для этого. Теоретически, она показывает последние голоса. (За кривость не пинайте она "временная" - я ее писал левой рукой за полчаса :) ). Заработает после первого голоса. В "wp-admin/index.php" перед таким кодом: [code]&amp;amp;lt;?php
+if ( $recentposts = $wpdb-&amp;amp;gt;get_results("SELECT ID, post_title FROM $wpdb-&amp;amp;gt;posts WHERE post_type = 'post' AND " . get_private_posts_cap_sql('post') . " AND post_date_gmt &amp;amp;lt; '$today' ORDER BY post_date DESC LIMIT 5") ) :
+?&amp;amp;gt;
+&amp;amp;lt;div&amp;amp;gt;
+&amp;amp;lt;h3&amp;amp;gt;&amp;amp;lt;?php _e('Posts'); ?&amp;amp;gt; &amp;amp;lt;a href="edit.php" title="&amp;amp;lt;?php _e('More posts...'); ?&amp;amp;gt;"&amp;amp;gt;»&amp;amp;lt;/a&amp;amp;gt;&amp;amp;lt;/h3&amp;amp;gt;
+&amp;amp;lt;ul&amp;amp;gt;[/code]</p>
+
+<p>Можете добавить строчку: [code]&amp;amp;lt;?php VoteAdmin(); ?&amp;amp;gt;[/code]</p>

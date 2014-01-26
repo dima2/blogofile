@@ -1,0 +1,48 @@
+---
+categories: Webmaster
+date: 2008/10/04 13:19:27
+description: ''
+permalink: http://thexnews.com/wordpress-прокачай-свою-dashboard.html
+tags: пузомерки, статистика, Wordpress, clicky, widgets, удобство, плагины plugin
+title: 'Wordpress: прокачай свою Dashboard!'
+---
+<p><img alt="Wordpress Dashboard настройка" class="alignleft alignnone size-full wp-image-222" height="130" src="/uploads/pimp-adminka.png" style="float: left;" title="pimp-adminka" width="130" />Сегодня я расскажу, как сделать из админки Wordpress информативную и удобную стартовую страницу, со всей необходимой статистикой, которую вы наверняка так любите. А также как добавить туда разных полезных виджетов. Вообщем смотрите скриншоты под катом.</p>
+
+<p>Для "прокачки" нам понадобиться плагин с говорящим названием <a href="http://wordpress.org/extend/plugins/wordpress-dashboard-editor/" title="Dashboard">Dashboard Editor</a>. Скачивается и устанавливается он, как и все остальные. После активации, в Dashboard появиться кнопка "Dashboard Management". А там страница с множеством опций. <!--more Разберем их по порядку--></p>
+
+<p>Удаление частей админки, производиться установкой птичек напротив соответствующих пунктов <span style="color: #c0c0c0;">(</span><span style="color: #808080;">Это кстати проблема юзабилити, гораздо логичнее было бы удалять снятием галочки</span><span style="color: #c0c0c0;">)</span>.</p>
+
+<p>Освободить место можно удалив секцию "Right Now". Кнопка "Write" все равно есть слева сверху, а число постов/виджетов/категорий ИМХО не такая необходимая информация. Если вы думаете иначе, все равно можно сократить эту секцию птичками "You have" и "You Are".</p>
+
+<p>В следующей секции (Widget), можно удалить все, <em>кроме</em> "Comments", "Incoming Links" и естественно "Remove entire Widget section". Скажите, как часто вы читаете новости Wordpress из Dashboard? Конечно туда можно подключить и другую RSS ленту, или даже френдленту, но для этих целей есть более подходящие сервисы.</p>
+
+<p><strong>Скриншоты (До и после):</strong>
+<p style="text-align: center;"><a href="/uploads/pimp-admin1.png"><img alt="Wordpress настроить админку" class="alignnone size-thumbnail wp-image-229" height="150" src="/uploads/pimp-admin1-150x150.png" title="pimp-admin1" width="150" /></a> <a href="/uploads/pimp-admin2.png"><img alt="Wordpress админка" class="alignnone size-thumbnail wp-image-230" height="150" src="/uploads/pimp-admin2-150x150.png" title="pimp-admin2" width="150" /></a></p></p>
+
+<p><strong>Теперь, когда мы удалили все ненужное</strong>, пора бы добавить что-нибудь полезное, логично а? Итак, <em>перед вторым</em>, полем ввода есть строчка "If you would like more than 1 "widget" how many extra would you like?". Собственно, это количество виджетов, которые мы можем добавить в админку. Виджеты могут быть откуда угодно, много их разных можно найти в списке <a href="http://www.google.com/webmasters/gadgets/foryourpage/index.html">Google Gadgets</a> - хоть <a href="http://www.google.com/ig/directory?synd=open&amp;source=gghx&amp;num=24&amp;url=http://www.schulz.dk/pacman.xml&amp;output=html">пэкмена</a>, хоть <a href="http://www.google.com/ig/directory?synd=open&amp;source=gghx&amp;num=24&amp;url=http://hosting.gmodules.com/ig/gadgets/file/104664111869706891171/Crude-Oil-Price.xml&amp;output=html">цены на нефть</a>. Можно найти что-нибудь соответствующее тематике вашего блога. Добавить их себе в админку очень просто - выбираем понравившийся, удаляем строку Title, жмем "Get The Code" и копируем код в поле ввода Dashboard Editor. Если поля заканчиваются, увеличиваем их количество ('<em>...how many extra would you like?</em>' )</p>
+
+<p>Если подходящего виджета не нашлось, можно вставить iframe с любым сайтом. Например, для статистики Liveinternet пишем:</p>
+
+<p>[code lang='html']<span><p></span><span class="string">""</span><span> height:448px;=</span><span class="string">""</span><span> margin-top:-235px;=</span><span class="string">""</span><span> margin-left:-210px;'=</span><span class="string">""</span><span> 'frameborder=</span><span class="string">"'0'"</span><span> src=</span><span class="string">"%27http://www.liveinternet.ru/stat/%3Cstrong%3E%3Cspan"</span><span> style=</span><span class="string">""</span><span> #ff0000;">site.com< =</span><span class="string">""</span><span> span>< =</span><span class="string">""</span><span> strong>'=</span><span class="string">""</span><span>></span></span></span></p></span>[/code]</p>
+
+<p>Где <strong><span style="color: #ff0000;">site.com</span></strong><span style="color: #000000;"> - ваш сайт.</span></p>
+
+<p>Но Liveinternet устарел. Поэтому я рекомендую <strong>использовать статистику</strong> <a href="http://getclicky.com/41592">Clicky</a> (← Реффссылка/<a href="http://getclicky.com/">НеРеффссылка</a>). Преимущества: полная статистика всего-чего-надо + вебдванольность, крутейший API, и множество виджетов, которые мы и будем сегодня добавлять в Wordpress. После регистрации, и установки на сайт идем в раздел Get Widgets. Два самых полезных это Dashy и Flashy.</p>
+
+<p><strong>Dashy</strong> - включает в себя почти всю статистику. Жмем "Click here to install on ANY web site!" - стираем Title, Width пусть будет, например 400, Get Code и копируем код в DashBoard Editor.</p>
+
+<p><strong>Flashy - </strong>показывает график посетителей (поставьте "200 px tall" во избежание скролла)</p>
+
+<p>Также рекомендую установить (или обновить) плагин <a href="http://wordpress.org/extend/plugins/stats/" title="Статистика в Dashboard">WP stats</a>. Он добавит в Dashboard график просмотров, что отлично дополнит график посещений от Clicky.</p>
+
+<p>Ну и наконец мы добавим то, что очень любят все блогеры, и что размещать на главной странице считается моветоном. А именно пузомерки. Ну а поскольку занимают они не так много места, совместим их с <a href="http://www.google.com/ig/directory?synd=open&amp;source=gghx&amp;num=24&amp;url=http://www.labpixies.com/campaigns/todo/todo.xml&amp;output=html">ToDo</a> листом. Тоже полезная вещь. Структура такова:</p>
+
+<p>[code lang='html']<div style="float: left;"> <!-- Код пузомерок --> </div></p>
+
+<p><div> <!-- Код Виджета --> </div></p>
+
+<p><div style="clear: left;"></div>[/code]</p>
+
+<p>Думаю вы знаете где достать пузомерки. ;) Их коды нужно вписывать каждый с новой сторки.</p>
+
+<p>В итоге мы получаем удобную админку, с которой приятно начинать блогерский день. ;)</p>
