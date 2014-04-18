@@ -1,4 +1,4 @@
-<a href='http://feeds.feedburner.com/graf'><span title='Ищите RSS? А RSS не будет. Их зохавал Крысомамонт! Бва-ха-ха-ха! Если хотите, можете подпистаться на Крысомамонта! Он теперь здесь главный. И Full-Text между прочим. Вот так.' id='krisomamonts'></span></a><a href='http://twitter.com/notDima'><span title='Что-то непоянтное зачем-то. Сто проецнтов фреш-ага из моей уюнтой галкатики.' class='twitter'></span></a>
+<a href='http://feeds.feedburner.com/graf'><span title='Ищите RSS? А RSS не будет. Их зохавал Крысомамонт! Бва-ха-ха-ха! Если хотите, можете подпистаться на Крысомамонта! Он теперь здесь главный. И Full-Text между прочим. Вот так.' id='krisomamonts'></span></a><a href='http://twitter.com/_dmi3'><span title='Что-то непоянтное зачем-то. Сто проецнтов фреш-ага из моей уюнтой галкатики.' class='twitter'></span></a>
 
 <div class="widget-title">
   <a href="http://thexnews.com/best" title="Лучшие посты" style="color:#CCCCCC;">Популярные записи</a>↓</div>
