@@ -7,4 +7,8 @@ read -p "Post title: $post_number-" post_title
 post_path="_posts/$post_number-$post_title.md"
 
 cp _drafts/template.md $post_path
-gedit $post_path
+sed -i "s/%title%/$post_title/g" $post_path
+date="s/%date%/"$(date +"%Y\/%m\/%d\ %H\:%M\:%S")"/g"
+sed -i "$date" $post_path
+
+sublime-text ../../../thexnews.sublime-project $post_path
